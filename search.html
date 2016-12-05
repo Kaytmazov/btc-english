@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Поиск | BTC English</title>
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel 2 -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+    <!-- Bootstrap-select -->
+    <link rel="stylesheet" href="bootstrap-select/css/bootstrap-select.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="header-top row">
+          <div class="header-top-left col-xs-12 col-sm-4 col-md-3 col-lg-4">
+            <a class="header-logo" href="/">
+              <img class="img-responsive" src="img/logo.png" width="300" height="75" alt="Логотип">
+              <span class="logo-title">Эффективный курс разговорного<br> английского и арабского языка</span>
+            </a>
+          </div>
+          <div class="header-top-right col-xs-12 col-sm-8 col-md-9 col-lg-8">
+            <div class="header-mobile">
+              <p>телефон горячей линии:</p>
+              <div>
+                <b>8-800-200-77-77</b><br>
+                <span>(звонок бесплатный по всей России)</span>
+              </div>
+            </div>
+            <div class="callback">
+              <button class="btn btn-orange" onclick='window.open("https://vpbx.sipout.net/cabinet/click2call/index/clientwindow/client/3496/line/904","new","width=400px,height=245px,left=300,top=300,toolbar=0,location=0,directories=0,menubar=0,scrollbars=0,resizable=0,status=0,fullscreen=0");'><i class="icon icon-callback"></i>Перезвоните мне!</button>
+            </div>
+            <div class="languages dropdown">
+              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownLanguages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="icon icon-languages"></i><span>Ru</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguages">
+                <li><a href="#">Русский</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Турецкий</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Английский</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- /header-top -->
+        <div class="header-middle row">
+          <div class="header-middle-left col-xs-12 col-md-5">
+            <div class="dropdown">
+              <i class="icon icon-section"></i>Вы в разделе <span class="red">английского языка.</span>
+              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownSection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Выбрать другой? 
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSection">
+                <li><a href="#" target="_blank">Русский</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#" target="_blank">Арабский</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-middle-right col-xs-12 col-md-7">
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModalReg">
+              <i class="icon icon-reg"></i>Регистрация
+            </button>
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModalAuth">
+              <i class="icon icon-auth"></i>Войти в личный кабинет
+            </button>
+            <form action="search.html">
+              <div class="search input-group">
+                <input type="text" class="form-control" placeholder="Поиск по курсам">
+                <span class="input-group-btn">
+                  <button class="btn" type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div> <!-- /header-middle -->
+        <nav class="navbar navbar-default">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Открыть навигацию</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav nav-justified">
+              <li class="active"><a href="/">Главная<span class="sr-only">(активная)</span></a></li>
+              <li><a href="#">О&nbsp;проекте</a></li>
+              <li class="dropdown">
+                <a href="courses-page.html" class="dropdown-toggle">Курсы&nbsp;<span class="caret hidden-xs hidden-sm"></span></a>
+                <div class="dropdown-menu">
+                  <ul class="dropdown-list">
+                    <li><a href="#">Разговорный английский язык</a></li>
+                    <li><a href="#">Бизнесс-курс английского языка</a></li>
+                  </ul>
+                  <ul class="dropdown-list">
+                    <li><a href="#">Английский с носителем языка</a></li>
+                    <li><a href="#">Английский для туристов</a></li>
+                  </ul>
+                  <ul class="dropdown-list">
+                    <li><a href="#">Английский по индивидуальной программе</a></li>
+                    <li><a href="#">Подготовка к международным экзаменам</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="helpful-page.html">Полезная&nbsp;информация</a></li>
+              <li><a href="#">Методика&nbsp;обучения</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </nav>
+      </div> <!-- /container -->
+    </header>
+<!-- Main -->
+    <main class="search-page page">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ol class="breadcrumb">
+              <li><a href="/">Главная</a></li>
+              <li class="active">Наши курсы</li>
+            </ol>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-xs-12">
+            <h1 class="section-title">Результаты поиска</h1>
+          </div>
+          <div class="col-xs-12">
+            <p class="search-results">Найдено совпадений: <span class="results-value">18</span></p>
+          </div>
+        </div>
+        <div class="courses-list">
+          
+          <div class="course-item">
+            <div class="course-date">
+              <span class="day">03</span><br>
+              <span class="month">ноября</span>
+            </div>
+            <div class="course-name">
+              <a href="course-info.html">Разговорный английский <br>язык</a>
+            </div>
+            <div class="course-teacher">
+              <p>Преподает:</p>
+              <a href="teacher.html">Железновский Иван <br>Иванович</a>
+            </div>
+            <div class="course-excerpt hidden-xs hidden-sm">
+              <p>
+                Краткое описание курса. <br>
+                Узнать подробнее можно <br>
+                пройдя по ссылке <br>
+                Расписание: пн-пт с 9.00 до 15.00 <br>
+                В воскресенье с 11.00 до 13.00 <br>
+              </p>
+            </div>
+            <div class="course-price hidden-xs">
+              <p class="price">от <span class="price-value">9000</span> р</p>
+            </div>
+            <div class="course-btns">
+              <button type="button" class="btn course-btn course-btn btn-enroll" data-toggle="modal" data-target="#myModalReg">Записаться</button>
+              <a href="#" class="btn course-btn course-btn btn-more">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="course-item">
+            <div class="course-date">
+              <span class="day">03</span><br>
+              <span class="month">ноября</span>
+            </div>
+            <div class="course-name">
+              <a href="course-info.html">Бизнес-курс английского языка</a>
+            </div>
+            <div class="course-teacher">
+              <p>Преподает:</p>
+              <a href="teacher.html">Иванов <br> Иван <br>Иванович</a>
+            </div>
+            <div class="course-excerpt hidden-xs hidden-sm">
+              <p>
+                Краткое описание курса. <br>
+                Узнать подробнее можно <br>
+                пройдя по ссылке <br>
+                Расписание: пн-пт с 9.00 до 15.00 <br>
+                В воскресенье с 11.00 до 13.00 <br>
+              </p>
+            </div>
+            <div class="course-price hidden-xs">
+              <p class="price">от <span class="price-value">9000</span> р</p>
+              <b class="stock">Акция!</b>
+            </div>
+            <div class="course-btns">
+              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#myModalReg">Записаться</button>
+              <a href="#" class="btn course-btn btn-more">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="course-item">
+            <div class="course-date">
+              <span class="day">03</span><br>
+              <span class="month">ноября</span>
+            </div>
+            <div class="course-name">
+              <a href="course-info.html">Английский с носителем <br>языка</a>
+            </div>
+            <div class="course-teacher">
+              <p>Преподает:</p>
+              <a href="teacher.html">Иванов <br> Иван <br>Иванович</a>
+            </div>
+            <div class="course-excerpt hidden-xs hidden-sm">
+              <p>
+                Краткое описание курса. <br>
+                Узнать подробнее можно <br>
+                пройдя по ссылке <br>
+                Расписание: пн-пт с 9.00 до 15.00 <br>
+                В воскресенье с 11.00 до 13.00 <br>
+              </p>
+            </div>
+            <div class="course-price hidden-xs">
+              <p class="price">от <span class="price-value">9000</span> р</p>
+            </div>
+            <div class="course-btns">
+              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#myModalReg">Записаться</button>
+              <a href="#" class="btn course-btn btn-more">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="course-item">
+            <div class="course-date">
+              <span class="day">10</span><br>
+              <span class="month">ноября</span>
+            </div>
+            <div class="course-name">
+              <a href="course-info.html">Английский <br>для туристов</a>
+            </div>
+            <div class="course-teacher">
+              <p>Преподает:</p>
+              <a href="teacher.html">Иванов <br> Иван <br>Иванович</a>
+            </div>
+            <div class="course-excerpt hidden-xs hidden-sm">
+              <p>
+                Краткое описание курса. <br>
+                Узнать подробнее можно <br>
+                пройдя по ссылке <br>
+                Расписание: пн-пт с 9.00 до 15.00 <br>
+                В воскресенье с 11.00 до 13.00 <br>
+              </p>
+            </div>
+            <div class="course-price hidden-xs">
+              <p class="price">от <span class="price-value">9000</span> р</p>
+              <b class="stock">Акция!</b>
+            </div>
+            <div class="course-btns">
+              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#myModalReg">Записаться</button>
+              <a href="#" class="btn course-btn btn-more">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="course-item">
+            <div class="course-date">
+              <span class="day">05</span><br>
+              <span class="month">декабря</span>
+            </div>
+            <div class="course-name">
+              <a href="course-info.html">Английский по индивидуальной программе</a>
+            </div>
+            <div class="course-teacher">
+              <p>Преподает:</p>
+              <a href="teacher.html">Иванов <br> Иван <br>Иванович</a>
+            </div>
+            <div class="course-excerpt hidden-xs hidden-sm">
+              <p>
+                Краткое описание курса. <br>
+                Узнать подробнее можно <br>
+                пройдя по ссылке <br>
+                Расписание: пн-пт с 9.00 до 15.00 <br>
+                В воскресенье с 11.00 до 13.00 <br>
+              </p>
+            </div>
+            <div class="course-price hidden-xs">
+              <p class="price">от <span class="price-value">9000</span> р</p>
+            </div>
+            <div class="course-btns">
+              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#myModalReg">Записаться</button>
+              <a href="#" class="btn course-btn btn-more">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="course-item">
+            <div class="course-date">
+              <span class="day">07</span><br>
+              <span class="month">января</span>
+            </div>
+            <div class="course-name">
+              <a href="course-info.html">Подготовка к международным экзаменам</a>
+            </div>
+            <div class="course-teacher">
+              <p>Преподает:</p>
+              <a href="teacher.html">Иванов <br> Иван <br>Иванович</a>
+            </div>
+            <div class="course-excerpt hidden-xs hidden-sm">
+              <p>
+                Краткое описание курса. <br>
+                Узнать подробнее можно <br>
+                пройдя по ссылке <br>
+                Расписание: пн-пт с 9.00 до 15.00 <br>
+                В воскресенье с 11.00 до 13.00 <br>
+              </p>
+            </div>
+            <div class="course-price hidden-xs">
+              <p class="price">от <span class="price-value">9000</span> р</p>
+            </div>
+            <div class="course-btns">
+              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#myModalReg">Записаться</button>
+              <a href="#" class="btn course-btn btn-more">Подробнее</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="row text-center">
+          <nav aria-label="Страница результатов поиска">
+            <ul class="pagination pagination-lg">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li class="active">
+                <span>2 <span class="sr-only">(current)</span></span>
+              </li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span class="glyphicon glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main>
+<!-- Консультация -->
+    <section class="feedback-section">
+      <div class="container">
+        <div class="feedback-bg">
+          <div class="feedback-text">
+            <h2 class="feedback-title">Не знаете какой курс выбрать?</h2>
+            <p class="feedback-desc">Закажите БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ <br>Наши специалисты с удовольствием ответят на все ваши вапросы</p>
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ваше имя" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ваш E-mail или номер телефона" required>
+              </div>
+              <button type="submit" class="btn btn-orange">Заказать консультацию</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Футер -->
+    <footer class="main-footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-nav">
+            <h4 class="nav-title"><a href="#">Главная</a></h4>
+            <ul>
+              <li><a href="#">Название подменю 1</a></li>
+              <li><a href="#">Название подменю 2</a></li>
+              <li><a href="#">Название подменю 3</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h4 class="nav-title"><a href="#">О проекте</a></h4>
+            <ul>
+              <li><a href="#">Название подменю 1</a></li>
+              <li><a href="#">Название подменю 2</a></li>
+              <li><a href="#">Название подменю 3</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h4 class="nav-title"><a href="#">Курсы</a></h4>
+            <ul>
+              <li><a href="#">Название подменю 1, длинное название</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h4 class="nav-title"><a href="#">Полезная информация</a></h4>
+            <ul>
+              <li><a href="#">Название подменю 1</a></li>
+              <li><a href="#">Название подменю 2</a></li>
+              <li><a href="#">Название подменю 3</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h4 class="nav-title"><a href="#">Методика обучения</a></h4>
+            <ul>
+              <li><a href="#">Название подменю 1</a></li>
+              <li><a href="#">Название подменю 2</a></li>
+              <li><a href="#">Название подменю 3</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h4 class="nav-title"><a href="#">Новости</a></h4>
+            <ul>
+              <li><a href="#">Название подменю 1</a></li>
+              <li><a href="#">Название подменю 2</a></li>
+              <li><a href="#">Название подменю 3</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h4 class="nav-title"><a href="#">Контакты</a></h4>
+            <ul>
+              <li><a href="#">Название подменю 1</a></li>
+              <li><a href="#">Название подменю 2</a></li>
+              <li><a href="#">Название подменю 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <div class="container">
+          <div class="row">
+            <div class="footer-middle-left col-xs-12 col-sm-6 col-md-3">
+              <div class="footer-mobile">
+                <p>телефон горячей линии:</p>
+                <b>8-800-200-77-77</b><br>
+                <span>(звонок бесплатный по всей России)</span>
+              </div>
+              <div class="callback">
+                <button class="btn btn-orange" onclick='window.open("https://vpbx.sipout.net/cabinet/click2call/index/clientwindow/client/3496/line/904","new","width=400px,height=245px,left=300,top=300,toolbar=0,location=0,directories=0,menubar=0,scrollbars=0,resizable=0,status=0,fullscreen=0");'><i class="icon icon-callback"></i>Перезвоните мне!</button>
+              </div>
+            </div>
+            <div class="footer-middle-center col-xs-12 col-sm-6 col-md-4">
+              <div class="footer-address">
+                <i class="icon icon-address"></i>
+                <address>
+                  <a href="mailto:info@btc.ru" target="_blank">info@btc.ru</a><br>
+                  <span>Москва, ул.Кремлевская, д1</span>
+                </address>
+              </div>
+              <div class="footer-skype">
+                <i class="icon icon-skype"></i><a href="skype:Skype_User?add">loginSkype</a>
+              </div>
+              <div class="footer-payments clearfix">
+                <div class="left">
+                  <p>Безопасность платежей:</p>
+                  <a href="#">Способ оплаты</a>
+                </div>
+                <div class="right">
+                  <img src="img/robokassa.png" width="130" height="34" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="footer-middle-right col-xs-12 col-md-5">
+              <div class="form-wrapper">
+                <p class="form-title">Я хочу изучать:</p>
+                <form class="form-inline">
+                  <select class="selectpicker" title="- выберите язык -" data-width="250px">
+                    <option>Английский</option>
+                    <option>Русский</option>
+                    <option>Арабский</option>
+                  </select>
+                  <button type="submit" class="btn btn-orange-tr">Перейти</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-left">
+            <p class="copyright">Все права защищены. (c) 2016</p>
+          </div>
+          <div class="footer-bottom-center">
+            <a href="https://www.facebook.com" class="social-icon social-fb" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 15 28"><path fill="#A4BB75" fill-rule="evenodd" d="M9.292,6.05 L9.292,9.89 L14.21,9.89 L13.117,14.83 L9.292,14.83 L9.292,27.45 L3.827,27.45 L3.827,14.83 L0,14.83 L0,9.89 L3.825,9.89 L3.825,6.05 C3.825,6.05 3.339,0.81 8.197,0 L14.208,0 L14.208,4.4 L11.476,4.4 C11.476,4.4 9.375,4.34 9.292,6.05 L9.292,6.05 Z"/></svg></a>
+            <a href="https://www.vk.com" class="social-icon social-vk" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 29 17"><path fill="#A4BB75" fill-rule="evenodd" d="M13.8973687,16.4827425 L15.5973687,16.4827425 C15.8853376,16.4477956 16.155748,16.3256747 16.3723687,16.1327425 C16.5290787,15.9106775 16.6110351,15.6444943 16.6063687,15.3727425 C16.6063687,15.3727425 16.5723687,13.0327425 17.6303687,12.6927425 C18.6883687,12.3527425 20.0113687,14.9327425 21.4303687,15.9227425 C21.959418,16.3552547 22.6400747,16.5570375 23.3193687,16.4827425 L27.1133687,16.4827425 C27.1133687,16.4827425 29.0983687,16.3327425 28.1573687,14.7427425 C27.4116186,13.4844601 26.4577437,12.3618566 25.3363687,11.4227425 C22.9563687,9.17274245 23.2753687,9.54274245 26.1363687,5.65274245 C27.8813687,3.29274245 28.5793687,1.84274245 28.3613687,1.22274245 C28.1533687,0.632742451 26.8793687,0.742742451 26.8793687,0.742742451 L22.5973687,0.742742451 C22.4067827,0.722375623 22.2145251,0.760757359 22.0463687,0.852742451 C21.8793404,0.983770091 21.7493931,1.15611399 21.6693687,1.35274245 C21.2297239,2.53063749 20.7022406,3.67385226 20.0913687,4.77274245 C18.1913687,8.06274245 17.4283687,8.23274245 17.1173687,8.02274245 C16.3933687,7.55274245 16.5743687,6.12274245 16.5743687,5.10274245 C16.5743687,1.91274245 17.0493687,0.582742451 15.6493687,0.242742451 C14.9970998,0.0844739308 14.326077,0.0171697398 13.6553687,0.0427424509 C12.4608396,-0.074917019 11.2548566,0.0509542635 10.1103687,0.412742451 C9.62436866,0.652742451 9.24936866,1.19274245 9.47736866,1.22274245 C9.96529903,1.2703799 10.4164949,1.50295511 10.7383687,1.87274245 C11.0347154,2.48262867 11.179807,3.15492048 11.1613687,3.83274245 C11.1613687,3.83274245 11.4133687,7.58274245 10.5733687,8.04274245 C9.99836866,8.36274245 9.20836866,7.71274245 7.51236866,4.73274245 C6.93414317,3.68704194 6.42472886,2.60474529 5.98736866,1.49274245 C5.90979737,1.30396384 5.78886796,1.13610149 5.63436866,1.00274245 C5.43529753,0.871020541 5.21248616,0.77931464 4.97836866,0.732742451 L0.918368657,0.732742451 C0.61638979,0.735310786 0.323655132,0.837223212 0.0853686569,1.02274245 C-0.0226023617,1.25645976 -0.0283994854,1.52457673 0.0693686569,1.76274245 C0.0693686569,1.76274245 3.24736866,9.38274245 6.84636866,13.1927425 C8.64016332,15.2178812 11.1930286,16.4090493 13.8973687,16.4827425 L13.8973687,16.4827425 Z"/></svg></a>
+            <a href="https://ok.ru" class="social-icon social-ok" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 17 27"><path fill="#A4BB75" fill-rule="evenodd" d="M8.01766107,0 C11.6427593,1.05138224e-06 14.5817393,2.93823644 14.5826589,6.5633346 C14.5835786,10.1884328 11.6460897,13.1281589 8.02099186,13.1299992 C4.39589405,13.1318394 1.45542199,10.1950972 1.45266107,6.57 C1.45159986,4.82806884 2.14276709,3.15710485 3.37402969,1.9249045 C4.6052923,0.692704148 6.2757296,0.00026497244 8.01766107,0 L8.01766107,0 Z M8.01766107,3.84 C9.52263329,3.83724112 10.7448913,5.05502474 10.7476519,6.55999696 C10.7504125,8.06496918 9.5326302,9.28722857 8.02765799,9.28999083 C6.52268578,9.29275309 5.30042502,8.07497221 5.29766107,6.57 C5.29606822,5.84720385 5.58180794,5.1534079 6.09196459,4.64137567 C6.60212124,4.12934345 7.29486394,3.84105962 8.01766107,3.84 L8.01766107,3.84 Z M8.02866107,15.2 C9.60829162,15.3687216 11.1968831,14.9757338 12.5156611,14.09 C13.0236781,13.6848261 13.67938,13.5134515 14.3206808,13.6182393 C14.9619816,13.723027 15.5290323,14.0941977 15.8816611,14.64 C15.8816611,14.64 17.3176611,17.94 11.9546611,18.55 C11.9546611,18.55 11.1626611,18.63 11.3936611,19.1 C11.6246611,19.57 15.1016611,22.66 15.3206611,23.56 C15.5396611,24.46 15.9056611,24.7 14.7596611,25.79 C13.6136611,26.88 12.7126611,26.62 10.8326611,24.67 C8.95266107,22.72 8.03266107,21.89 8.03266107,21.89 L8.03266107,15.2 L8.02866107,15.2 Z M8.02866107,15.2 C6.44871686,15.3687023 4.85981757,14.9757259 3.54066107,14.09 C3.03264405,13.6848261 2.37694214,13.5134515 1.73564134,13.6182393 C1.09434054,13.723027 0.527289804,14.0941977 0.174661065,14.64 C0.174661065,14.64 -1.26133893,17.94 4.10166107,18.55 C4.10166107,18.55 4.89366107,18.63 4.66266107,19.1 C4.43166107,19.57 0.955661065,22.66 0.735661065,23.56 C0.515661065,24.46 0.150661065,24.7 1.29666107,25.79 C2.44266107,26.88 3.34366107,26.62 5.22366107,24.67 C7.10366107,22.72 8.02366107,21.89 8.02366107,21.89 L8.02366107,15.2 L8.02866107,15.2 Z"/></svg></a>
+            <a href="https://twitter.com" class="social-icon social-tw" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 28 23"><path fill="#A4BB75" fill-rule="evenodd" d="M24.606,3.84 L27.357,3.3 C26.5181552,4.28858188 25.5979348,5.20512277 24.606,6.04 L24.594,6.04 C24.5465086,6.58586822 24.5511965,7.13502211 24.608,7.68 C19.35,30.31 0.001,20.31 0.001,20.31 C7.04,20.49 7.668,17.56 7.668,17.56 C3.545,16.94 2.75,14.27 2.75,14.27 C3.51390111,14.6571378 4.44626645,14.4225537 4.936,13.72 C2.43277666,13.1550248 0.773825034,10.7739413 1.111,8.23 C1.88607009,8.82792949 2.81744541,9.1890892 3.793,9.27 C3.293,8.69 -0.863,3.69 1.657,1.1 C1.657,1.1 4.69,6.58 12.723,7.1 L13.26,6.97 C13.1753255,6.57222264 13.1324261,6.16668958 13.132,5.76 C13.1264716,2.58514024 15.6951423,0.00662099101 18.87,0 C22.69,0 23.515,2.2 23.515,2.2 L26.247,0.55 C26.247,0.55 25.945,3.3 24.606,3.84 L24.606,3.84 Z"/></svg></a>
+            <a href="https://www.instagram.com/" class="social-icon social-insta" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24"><path fill="#A4BB75" fill-rule="evenodd" d="M22.1200128,24.14 L1.92001277,24.14 C1.40930638,24.1392067 0.919891601,23.9352934 0.559706416,23.5732322 C0.199521231,23.2111711 -0.00184689697,22.7207036 1.27670921e-05,22.21 L1.27670921e-05,1.93 C-0.00184689697,1.41929638 0.199521231,0.928828925 0.559706416,0.566767775 C0.919891601,0.204706626 1.40930638,0.000793348938 1.92001277,0 L22.1200128,0 C22.6307192,0.000793348938 23.1201339,0.204706626 23.4803191,0.566767775 C23.8405043,0.928828925 24.0418724,1.41929638 24.0400128,1.93 L24.0400128,22.21 C24.0418724,22.7207036 23.8405043,23.2111711 23.4803191,23.5732322 C23.1201339,23.9352934 22.6307192,24.1392067 22.1200128,24.14 L22.1200128,24.14 Z M12.0200128,7.72 C10.2588046,7.71190241 8.66650889,8.76659638 7.98690539,10.3914222 C7.30730189,12.016248 7.67451652,13.8905314 8.91701909,15.138773 C10.1595217,16.3870146 12.032093,16.7628626 13.6600333,16.0907539 C15.2879736,15.4186453 16.3499942,13.8312268 16.3500128,12.07 C16.3544373,9.6735363 14.4164714,7.72661904 12.0200128,7.72 L12.0200128,7.72 Z M21.3100128,4.21 C21.3116069,3.82137672 21.1586175,3.44806612 20.8847565,3.17232937 C20.6108955,2.89659262 20.2386379,2.74105855 19.8500128,2.74 L18.3900128,2.74 C18.0013877,2.74105855 17.62913,2.89659262 17.3552691,3.17232937 C17.0814081,3.44806612 16.9284186,3.82137672 16.9300128,4.21 L16.9300128,5.67 C16.9284186,6.05862328 17.0814081,6.43193388 17.3552691,6.70767063 C17.62913,6.98340738 18.0013877,7.13894145 18.3900128,7.14 L19.8500128,7.14 C20.2386379,7.13894145 20.6108955,6.98340738 20.8847565,6.70767063 C21.1586175,6.43193388 21.3116069,6.05862328 21.3100128,5.67 L21.3100128,4.21 L21.3100128,4.21 Z M21.3100128,9.87 L19.6700128,9.87 C19.7637541,10.5996643 19.7771676,11.3374103 19.7100128,12.07 C19.7100128,16.3170697 16.2670825,19.76 12.0200128,19.76 C7.77294304,19.76 4.33001277,16.3170697 4.33001277,12.07 C4.26285789,11.3374103 4.27627146,10.5996643 4.37001277,9.87 L2.73001277,9.87 L2.73001277,20.3 C2.77925096,20.8821402 3.23834652,21.3454476 3.82001277,21.4 L20.2200128,21.4 C20.801679,21.3454476 21.2607746,20.8821402 21.3100128,20.3 L21.3100128,9.87 L21.3100128,9.87 Z"/></svg></a>
+            <a href="https://plus.google.com" class="social-icon social-gplus" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 36 22"><path fill="#A3BB75" fill-rule="evenodd" d="M31.19,12.1 L31.19,15.95 L27.91,15.95 L27.91,12.1 L24.06,12.1 L24.06,8.82 L27.91,8.82 L27.91,4.97 L31.19,4.97 L31.19,8.82 L35.01,8.82 L35.01,12.1 L31.19,12.1 L31.19,12.1 Z M15.04,5.89 C13.92,4.98 12.51,4.43 10.96,4.43 C7.34,4.43 4.4,7.38 4.4,11.01 C4.4,14.65 7.34,17.6 10.96,17.6 C14.21,17.6 16.89,15.23 17.42,12.11 L10.96,12.11 L10.96,8.82 L14.78,8.82 L17.13,8.82 L21.11,8.82 C21.26,9.53 21.34,10.27 21.34,11.02 C21.34,11.36 21.33,11.69 21.29,12.02 L21.34,12.11 L21.29,12.11 C20.74,17.36 16.32,21.46 10.95,21.46 C5.21,21.46 0.56,16.78 0.56,11.02 C0.56,5.26 5.21,0.59 10.95,0.59 C13.76,0.59 16.3,1.71 18.17,3.53 L15.04,5.89 L15.04,5.89 Z"/></svg></a>
+            <a href="https://www.youtube.com" class="social-icon social-youtube" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 28 20"><path fill="#A4BB75" fill-rule="evenodd" d="M13.66,9.09494702e-13 L13.65,9.09494702e-13 C13.65,9.09494702e-13 7.92,9.09494702e-13 4.09,0.28 C3.05547177,0.299797677 2.07065772,0.72750889 1.35,1.47 C0.771200196,2.29979095 0.400755684,3.25677261 0.27,4.26 C0.101659611,5.77100115 0.0115393654,7.28969418 4.54747351e-13,8.81 L4.54747351e-13,10.94 C0.0117679866,12.4569728 0.10188806,13.9723252 0.27,15.48 C0.39909615,16.4836495 0.769689013,17.4410144 1.35,18.27 C2.17604857,19.0258523 3.25045902,19.4527703 4.37,19.47 C6.55,19.69 13.66,19.76 13.66,19.76 L13.66,19.76 C13.66,19.76 19.4,19.75 23.22,19.46 C24.2570224,19.451812 25.2461237,19.0222388 25.96,18.27 C26.5462989,17.4432786 26.9205939,16.4852207 27.05,15.48 C27.2181119,13.9723252 27.308232,12.4569728 27.32,10.94 L27.32,8.81 C27.3084606,7.28969418 27.2183404,5.77100115 27.05,4.26 C26.9190102,3.25518478 26.5448597,2.29749689 25.96,1.47 C25.2403551,0.726045608 24.2549062,0.298058665 23.22,0.28 C19.4,0 13.66,0 13.66,0 L13.66,9.09494702e-13 Z M10.92,6.04 L18.06,9.74 L10.92,13.72 L10.92,6.04 L10.92,6.04 Z"/></svg></a>
+          </div>
+          <div class="footer-bottom-right">
+            <a href="http://jeny-art.ru" target="_blank">Сайт разработан студией Jeny-art</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- Плавающая кнопка телефона -->
+    <div class="btc_phone_but" title="Закажите бесплатный обратный звонок" onclick='window.open("https://vpbx.sipout.net/cabinet/click2call/index/clientwindow/client/3496/line/904","new","width=400px,height=245px,left=300,top=300,toolbar=0,location=0,directories=0,menubar=0,scrollbars=0,resizable=0,status=0,fullscreen=0");'>
+      <div class="btc_bg_puls"></div>
+      <div class="btc_but_img">
+        <img src="img/phone-white.svg" width="54px" height="54px">
+      </div>
+    </div>
+
+<!-- Модальные окна -->
+
+    <!-- Регистрации -->
+    <div class="modal fade" id="myModalReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Регистрация</h4>
+          </div>
+          <div class="modal-body">
+            <div class="social-auth">
+              <p>Вы можете зарегистрироваться через соцсети:</p>
+              <div class="social-btns">
+                <a href="https://www.vk.com" target="_blank"><i class="icon icon-vk"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="icon icon-fb"></i></a>
+                <a href="https://ok.ru" target="_blank"><i class="icon icon-ok"></i></a>
+                <a href="https://plus.google.com" target="_blank"><i class="icon icon-gplus"></i></a>
+              </div>
+              <p>или заполните форму:</p>
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="inputFIO">ФИО</label>
+                <input type="text" class="form-control" id="inputFIO" placeholder="Ваше имя*" required>
+              </div>
+              <div class="form-group">
+                <label for="inputLogin">E-mail (логин)</label>
+                <input type="text" class="form-control" id="inputLogin" placeholder="Введите ваш E-mail*" required>
+              </div>
+              <div class="form-group">
+                <label for="inputMobile">Мобильный телефон</label>
+                <input type="tel" class="form-control" id="inputMobile" placeholder="+7 (000) 000 00 00*" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+              </div>
+              <div class="form-group row">
+                <div class="col-xs-4">
+                  <span class="captcha">17 + 5 =</span>
+                </div>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" placeholder="Проверочный код*" required>
+                </div>
+              </div>
+              <div class="reg-checkbox checkbox">
+                <div class="label-wrapper">
+                  <label>
+                    <input type="checkbox" id="termsCheckbox" required>
+                    <span class="checkbox-indicator"></span> Я ознакомлен(а) с условиями
+                  </label>
+                  <a class="modal-link" href="#">Пользовательского соглашения</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-orange-tr">Ок</button>
+                <button type="button" class="btn btn-green-tr" data-dismiss="modal">Отмена</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Вход в личный кабинет -->
+    <div class="modal fade" id="myModalAuth" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Вход в личный кабинет</h4>
+          </div>
+          <div class="modal-body">
+            <div class="social-auth">
+              <p>Вы можете войти через соцсети:</p>
+              <div class="social-btns">
+                <a href="https://www.vk.com" target="_blank"><i class="icon icon-vk"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="icon icon-fb"></i></a>
+                <a href="https://ok.ru" target="_blank"><i class="icon icon-ok"></i></a>
+                <a href="https://plus.google.com" target="_blank"><i class="icon icon-gplus"></i></a>
+              </div>
+              <p>или заполните форму:</p>
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="inputLogin">Логин</label>
+                <input type="text" class="form-control" id="inputLogin" placeholder="Ваш логин (Электронная почта)" required>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Пароль</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Пароль" required>
+              </div>
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-6">
+                  <label class="auth-checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-indicator"></span> Чужой компьютер
+                  </label>
+                </div>
+                <div class="col-xs-12 col-sm-6 auth-forgot">
+                  <a href="#">Забыли пароль?</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-green-tr">Войти</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ошибка авторизации -->
+    <div class="modal fade error" id="myModalError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-error"></i>Неверный логин/пароль</h4>
+          </div>
+          <div class="modal-body">
+            <p>Вы указали неверный логин или пароль.</p>
+            <p>Пожалуйста, воспользуйтесь</p>
+            <a href="#myModalAuth" role="button" class="modal-link" data-toggle="modal" data-dismiss="modal">Напоминанием пароля</a>
+            <div class="text-center">
+              <button type="submit" class="btn btn-green-tr" data-toggle="modal" data-target="#myModalAuth" data-dismiss="modal">Напомнить пароль</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Подключение скриптов -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap-select -->
+    <script src="bootstrap-select/js/bootstrap-select.min.js"></script>
+  </body>
+</html>
