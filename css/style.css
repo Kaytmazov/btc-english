@@ -73,7 +73,8 @@ a {
   color: #646464;
 }
 
-a:hover {
+a:hover, 
+a:focus {
   color: #9fb919;
 }
 
@@ -1814,16 +1815,36 @@ main {
   margin-bottom: 20px;
 }
 
+.btn-msg-del,
 a.btn-more {
   color: #a4bb75;
   border-color: #a4bb75;
-  background-position: 106px -122px, 0;
   text-decoration: none;
 }
 
-a.btn-more:hover {
+a.btn-more, 
+a.btn-more:active {
+  background-position: 106px -122px, 0;
+}
+
+.btn-msg-del {
+  padding-left: 30px;
+}
+
+.btn-msg-del, 
+.btn-msg-del:active {
+  background-position: 106px -484px, 0;
+}
+
+a.btn-more:hover, 
+a.btn-more:focus, 
+a.btn-more:active, 
+.btn-msg-del:hover, 
+.btn-msg-del:focus, 
+.btn-msg-del:active {
   color: #B5D183;
   border-color: #B5D183;
+  box-shadow: none;
 }
 
 /* ====================== Консультация ====================== */
@@ -2346,6 +2367,7 @@ time {
 *                                                                                   *
 ************************************************************************************/
 .lk-nav {
+  min-height: 430px;
   margin-bottom: 0;
   padding: 0;
   padding-top: 25px;
@@ -2390,14 +2412,23 @@ time {
 }
 
 .lk .tab-header {
-  padding: 25px 35px 30px;
+  padding: 25px 20px 30px 35px;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
 }
 
 .tab-header h2 {
+  float: left;
   margin: 0;
   font-size: 26px;
+}
+
+.tab-header-btns {
+  float: right;
+}
+
+.tab-header-btns .btn-msg-del {
+  margin-right: 10px;
 }
 
 .lk-content {
@@ -2434,7 +2465,7 @@ time {
   border-color: #96a939
 }
 
-.form-horizontal .control-label {
+.lk-profile .control-label {
   padding-top: 18px;
   font-size: 16px;
   font-weight: 400;
@@ -2461,6 +2492,122 @@ time {
   text-align: left;
 }
 
+.messages-list .message {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 18px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.messages-list .message.read {
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+.message .lk-checkbox {
+  position: relative;
+  top: -5px;
+  padding-left: 25px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.message input[type="checkbox"] {
+  display: none;
+}
+
+.lk-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #b6ce3a;
+}
+
+.lk-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 11px;
+  height: 10px;
+  background: url(../img/sprite.png) -43px -96px no-repeat;
+}
+
+.message a {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #191919;
+}
+
+.msg-name {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.new-msg {
+  margin-right: 20px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #fff;
+  background-color: #999;
+  border-radius: 2px;
+}
+
+.msg-marker {
+  position: absolute;
+  top: -1px;
+}
+
+.msg-text {
+  margin-left: 30px;
+}
+
+.msg-text .gray {
+  color: #7f7f7f;
+}
+
+.message.active .msg-marker .cls-1 {
+  fill: #b6ce3a;
+  stroke: #b6ce3a;
+}
+
+.msg-date {
+  float: right;
+  color: #191919;
+}
+
+.lk .message-body {
+  margin-top: 10px;
+  color: #7f7f7f;
+}
+
+.message-modal .modal-body {
+  padding-left: 20px;
+}
+
+.message-modal .form-group {
+  margin-bottom: 30px;
+}
+
+.message-modal .control-label {
+  font-size: 14px;
+}
+
+.message-modal .form-control {
+  height: 35px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.message-modal textarea.form-control {
+  height: auto;
+}
 
 /* ====================== Плавающая кнопка телефона ====================== */
 
@@ -2729,7 +2876,11 @@ time {
 
   .news-photo { margin-bottom: 10px; }
 
+  .lk-nav { min-height: 0; }
+
   .lk-nav a { font-size: 11px; }
+
+  .msg-text { max-width: 350px; }
 
 }
 
@@ -2939,12 +3090,15 @@ time {
   .lk .form-control, 
   .lk-nofield-value { font-size: 14px; }
 
-  .form-horizontal .control-label { padding-top: 12px; }
+  .lk-profile .control-label { padding-top: 12px; }
 
   .lk .form-control { height: 44px; }
 
   .lk-nofield-value { margin-top: 10px; }
 
+  .msg-name { max-width: 150px; }
+
+  .msg-text { max-width: 300px; }
 
 }
 
@@ -3263,6 +3417,25 @@ time {
 
   .lk-button { text-align: center; }
 
+  .tab-header-btns .btn-msg-del {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .msg-name { max-width: 220px; }
+
+  .msg-marker { right: 20px; }
+
+  .msg-text {
+    max-width: 220px;
+    margin-top: 5px;
+  }
+
+  .msg-date { margin-top: 20px; }
+
+  .message-modal .form-group { margin-bottom: 10px; }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -3288,6 +3461,8 @@ time {
   }
 
   .header-top-right .callback { margin-right: 5px; }
+
+  .header-top-right .callback .btn-orange { font-size: 16px; }
 
   .header-middle-left { margin-top: 0; }
 
@@ -3496,9 +3671,40 @@ time {
   }
 
   .tab-header h2 {
+    float: none;
+    margin-bottom: 20px;
     font-size: 18px;
     text-align: center;
   }
+
+  .tab-header-btns {
+    float: none;
+    text-align: center;
+  }
+
+  .tab-header-btns .btn-msg-del { display: inline-block; }
+
+  .msg-name {
+    max-width: 150px;
+    margin-right: 0;
+  }
+
+  .new-msg {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 0;
+    padding: 0;
+    font-size: 0;
+    border-radius: 50%;
+  }
+
+  .msg-text {
+    max-width: 150px;
+    margin-left: 0;
+  }
+
+
 
 }
 

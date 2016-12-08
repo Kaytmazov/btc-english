@@ -21,3 +21,8 @@ $(document).ready(function(){
     $('.lk-nav').height( $('.tab-content').height() - 25 );
   }
 });
+
+// Сообщения
+$('.message a').on('click', function(){
+  $(this).parent().parent('.message').toggleClass('active');
+});

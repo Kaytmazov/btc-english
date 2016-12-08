@@ -159,13 +159,13 @@
         </div>
         <div class="lk clearfix">
           <ul class="lk-nav col-md-1" role="tablist">
-            <li class="lk-nav-item nav-profile active">
+            <li class="lk-nav-item nav-profile">
               <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
                 <i class="fa fa-user-circle-o" aria-hidden="true"></i><br>
                 Профиль
               </a>
             </li>
-            <li class="lk-nav-item nav-messages">
+            <li class="lk-nav-item nav-messages active">
               <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
                 <i class="fa fa-envelope" aria-hidden="true"></i><br>
                 Сообщения
@@ -192,8 +192,8 @@
           </ul> <!-- /lk-nav -->
 
           <div class="tab-content col-md-11">
-            <div id="profile" class="lk-profile tab-pane active row" role="tabpanel">
-              <div class="tab-header">
+            <div id="profile" class="lk-profile tab-pane row" role="tabpanel">
+              <div class="tab-header clearfix">
                 <h2>Профиль пользователя</h2>
               </div>
               <div class="lk-content col-xs-12">
@@ -277,20 +277,267 @@
               </div>
             </div> <!-- /profile --> 
 
-            <div id="messages" class="lk-messages tab-pane row" role="tabpanel">
-              <div class="tab-header">
+            <div id="messages" class="lk-messages tab-pane active row" role="tabpanel">
+              <div class="tab-header clearfix">
                 <h2>Сообщения</h2>
+                <div class="tab-header-btns">
+                  <button type="button" class="btn course-btn btn-msg-del">Удалить</button>
+                  <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#newMsgModal">Написать</button>
+                </div>
               </div>
-              <div class="lk-content col-xs-12">
-                <p>сообщения</p>
-              </div>
+              <div class="messages-list lk-content col-xs-12" id="messageList" role="tablist" aria-multiselectable="true">
+
+                <div class="message">
+                  <div class="message-head" role="tab" id="heading-1">
+                    <label class="lk-checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                    <a class="msg-name" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Елена Дмитриевна Смирнова</a>
+                    <span class="new-msg">новое</span>
+                    <i class="msg-marker"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="23" viewBox="0 0 15 23"><defs><style>.cls-1 { fill: transparent; stroke: #ccc; stroke-linejoin: round; stroke-width: 1px; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M.5.5h14v22l-7.1-6-6.9 6v-22z"/></svg></i>
+                    <a class="msg-text" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                      Пройдите, пожалуйста, тестирование - <span class="gray">обращаем ваше внимание на то, что время</span>
+                    </a>
+                    <span class="msg-date">27 окт.</span>
+                  </div>
+                  <div id="collapse-1" class="collapse" role="tabpanel" aria-labelledby="heading-1">
+                    <div class="message-body">
+                      <p>Полный текст сообщения. является авторизованным сервисным центром  Canon и  занимается диагностикой, ремонтом и техническим обслуживанием офисной техники, а также является авторизованным партнером по продажам офисной техники Canon - качество от мирового лидера, которому можно доверять! Благодаря своему опыту, мы прекрасно ориентируемся в большом разнообразии современной офисной техники, а квалифицированные менеджеры помогут подобрать ту модель офисного аппарата, которая нужна именно Вам. Многолетний опыт работы в сфере оказания комплексных услуг и обладания необходимыми навыками — то, что отличает наших специалистов от многих других. Слаженная команда сервисных инженеров позволит проводить диагностический контроль, ремонт и обслуживание офисной техники любых моделей и марок, среди которых Canon, Kyocera, HP, Samsung, Xerox, Ricoh, Panasonic , Brother  с соблюдением всех необходимых требований к срокам и качеству работы. Оперативность и качество – девиз наших специалистов!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="message">
+                  <div class="message-head" role="tab" id="heading-2">
+                    <label class="lk-checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                    <a class="msg-name" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-2" aria-expanded="true" aria-controls="collapse-2">Елена Дмитриевна Смирнова</a>
+                    <span class="new-msg">новое</span>
+                    <i class="msg-marker"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="23" viewBox="0 0 15 23"><defs><style>.cls-1 { fill: transparent; stroke: #ccc; stroke-linejoin: round; stroke-width: 1px; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M.5.5h14v22l-7.1-6-6.9 6v-22z"/></svg></i>
+                    <a class="msg-text" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+                      Пройдите, пожалуйста, тестирование - <span class="gray">обращаем ваше внимание на то, что время</span>
+                    </a>
+                    <span class="msg-date">27 окт.</span>
+                  </div>
+                  <div id="collapse-2" class="collapse" role="tabpanel" aria-labelledby="heading-2">
+                    <div class="message-body">
+                      <p>Полный текст сообщения. является авторизованным сервисным центром  Canon и  занимается диагностикой, ремонтом и техническим обслуживанием офисной техники, а также является авторизованным партнером по продажам офисной техники Canon - качество от мирового лидера, которому можно доверять! Благодаря своему опыту, мы прекрасно ориентируемся в большом разнообразии современной офисной техники, а квалифицированные менеджеры помогут подобрать ту модель офисного аппарата, которая нужна именно Вам. Многолетний опыт работы в сфере оказания комплексных услуг и обладания необходимыми навыками — то, что отличает наших специалистов от многих других. Слаженная команда сервисных инженеров позволит проводить диагностический контроль, ремонт и обслуживание офисной техники любых моделей и марок, среди которых Canon, Kyocera, HP, Samsung, Xerox, Ricoh, Panasonic , Brother  с соблюдением всех необходимых требований к срокам и качеству работы. Оперативность и качество – девиз наших специалистов!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="message">
+                  <div class="message-head" role="tab" id="heading-3">
+                    <label class="lk-checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                    <a class="msg-name" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-3" aria-expanded="true" aria-controls="collapse-3">Елена Дмитриевна Смирнова</a>
+                    <span class="new-msg">новое</span>
+                    <i class="msg-marker"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="23" viewBox="0 0 15 23"><defs><style>.cls-1 { fill: transparent; stroke: #ccc; stroke-linejoin: round; stroke-width: 1px; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M.5.5h14v22l-7.1-6-6.9 6v-22z"/></svg></i>
+                    <a class="msg-text" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
+                      Пройдите, пожалуйста, тестирование - <span class="gray">обращаем ваше внимание на то, что время</span>
+                    </a>
+                    <span class="msg-date">27 окт.</span>
+                  </div>
+                  <div id="collapse-3" class="collapse" role="tabpanel" aria-labelledby="heading-3">
+                    <div class="message-body">
+                      <p>Полный текст сообщения. является авторизованным сервисным центром  Canon и  занимается диагностикой, ремонтом и техническим обслуживанием офисной техники, а также является авторизованным партнером по продажам офисной техники Canon - качество от мирового лидера, которому можно доверять! Благодаря своему опыту, мы прекрасно ориентируемся в большом разнообразии современной офисной техники, а квалифицированные менеджеры помогут подобрать ту модель офисного аппарата, которая нужна именно Вам. Многолетний опыт работы в сфере оказания комплексных услуг и обладания необходимыми навыками — то, что отличает наших специалистов от многих других. Слаженная команда сервисных инженеров позволит проводить диагностический контроль, ремонт и обслуживание офисной техники любых моделей и марок, среди которых Canon, Kyocera, HP, Samsung, Xerox, Ricoh, Panasonic , Brother  с соблюдением всех необходимых требований к срокам и качеству работы. Оперативность и качество – девиз наших специалистов!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="message">
+                  <div class="message-head" role="tab" id="heading-4">
+                    <label class="lk-checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                    <a class="msg-name" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-4" aria-expanded="true" aria-controls="collapse-4">Елена Дмитриевна Смирнова</a>
+                    <span class="new-msg">новое</span>
+                    <i class="msg-marker"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="23" viewBox="0 0 15 23"><defs><style>.cls-1 { fill: transparent; stroke: #ccc; stroke-linejoin: round; stroke-width: 1px; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M.5.5h14v22l-7.1-6-6.9 6v-22z"/></svg></i>
+                    <a class="msg-text" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
+                      Пройдите, пожалуйста, тестирование - <span class="gray">обращаем ваше внимание на то, что время</span>
+                    </a>
+                    <span class="msg-date">27 окт.</span>
+                  </div>
+                  <div id="collapse-4" class="collapse" role="tabpanel" aria-labelledby="heading-4">
+                    <div class="message-body">
+                      <p>Полный текст сообщения. является авторизованным сервисным центром  Canon и  занимается диагностикой, ремонтом и техническим обслуживанием офисной техники, а также является авторизованным партнером по продажам офисной техники Canon - качество от мирового лидера, которому можно доверять! Благодаря своему опыту, мы прекрасно ориентируемся в большом разнообразии современной офисной техники, а квалифицированные менеджеры помогут подобрать ту модель офисного аппарата, которая нужна именно Вам. Многолетний опыт работы в сфере оказания комплексных услуг и обладания необходимыми навыками — то, что отличает наших специалистов от многих других. Слаженная команда сервисных инженеров позволит проводить диагностический контроль, ремонт и обслуживание офисной техники любых моделей и марок, среди которых Canon, Kyocera, HP, Samsung, Xerox, Ricoh, Panasonic , Brother  с соблюдением всех необходимых требований к срокам и качеству работы. Оперативность и качество – девиз наших специалистов!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="message read">
+                  <div class="message-head" role="tab" id="heading-5">
+                    <label class="lk-checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                    <a class="msg-name" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-5" aria-expanded="true" aria-controls="collapse-5">Елена Дмитриевна Смирнова</a>
+                    <span class="new-msg">новое</span>
+                    <i class="msg-marker"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="23" viewBox="0 0 15 23"><defs><style>.cls-1 { fill: transparent; stroke: #ccc; stroke-linejoin: round; stroke-width: 1px; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M.5.5h14v22l-7.1-6-6.9 6v-22z"/></svg></i>
+                    <a class="msg-text" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-5" aria-expanded="true" aria-controls="collapse-5">
+                      Пройдите, пожалуйста, тестирование - <span class="gray">обращаем ваше внимание на то, что время</span>
+                    </a>
+                    <span class="msg-date">27 окт.</span>
+                  </div>
+                  <div id="collapse-5" class="collapse" role="tabpanel" aria-labelledby="heading-5">
+                    <div class="message-body">
+                      <p>Полный текст сообщения. является авторизованным сервисным центром  Canon и  занимается диагностикой, ремонтом и техническим обслуживанием офисной техники, а также является авторизованным партнером по продажам офисной техники Canon - качество от мирового лидера, которому можно доверять! Благодаря своему опыту, мы прекрасно ориентируемся в большом разнообразии современной офисной техники, а квалифицированные менеджеры помогут подобрать ту модель офисного аппарата, которая нужна именно Вам. Многолетний опыт работы в сфере оказания комплексных услуг и обладания необходимыми навыками — то, что отличает наших специалистов от многих других. Слаженная команда сервисных инженеров позволит проводить диагностический контроль, ремонт и обслуживание офисной техники любых моделей и марок, среди которых Canon, Kyocera, HP, Samsung, Xerox, Ricoh, Panasonic , Brother  с соблюдением всех необходимых требований к срокам и качеству работы. Оперативность и качество – девиз наших специалистов!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="message read">
+                  <div class="message-head" role="tab" id="heading-6">
+                    <label class="lk-checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                    <a class="msg-name" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-6" aria-expanded="true" aria-controls="collapse-6">Елена Дмитриевна Смирнова</a>
+                    <span class="new-msg">новое</span>
+                    <i class="msg-marker"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="23" viewBox="0 0 15 23"><defs><style>.cls-1 { fill: transparent; stroke: #ccc; stroke-linejoin: round; stroke-width: 1px; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M.5.5h14v22l-7.1-6-6.9 6v-22z"/></svg></i>
+                    <a class="msg-text" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-6" aria-expanded="true" aria-controls="collapse-6">
+                      Пройдите, пожалуйста, тестирование - <span class="gray">обращаем ваше внимание на то, что время</span>
+                    </a>
+                    <span class="msg-date">27 окт.</span>
+                  </div>
+                  <div id="collapse-6" class="collapse" role="tabpanel" aria-labelledby="heading-6">
+                    <div class="message-body">
+                      <p>Полный текст сообщения. является авторизованным сервисным центром  Canon и  занимается диагностикой, ремонтом и техническим обслуживанием офисной техники, а также является авторизованным партнером по продажам офисной техники Canon - качество от мирового лидера, которому можно доверять! Благодаря своему опыту, мы прекрасно ориентируемся в большом разнообразии современной офисной техники, а квалифицированные менеджеры помогут подобрать ту модель офисного аппарата, которая нужна именно Вам. Многолетний опыт работы в сфере оказания комплексных услуг и обладания необходимыми навыками — то, что отличает наших специалистов от многих других. Слаженная команда сервисных инженеров позволит проводить диагностический контроль, ремонт и обслуживание офисной техники любых моделей и марок, среди которых Canon, Kyocera, HP, Samsung, Xerox, Ricoh, Panasonic , Brother  с соблюдением всех необходимых требований к срокам и качеству работы. Оперативность и качество – девиз наших специалистов!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="message read">
+                  <div class="message-head" role="tab" id="heading-7">
+                    <label class="lk-checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                    <a class="msg-name" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-7" aria-expanded="true" aria-controls="collapse-7">Елена Дмитриевна Смирнова</a>
+                    <span class="new-msg">новое</span>
+                    <i class="msg-marker"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="23" viewBox="0 0 15 23"><defs><style>.cls-1 { fill: transparent; stroke: #ccc; stroke-linejoin: round; stroke-width: 1px; fill-rule: evenodd; }</style></defs><path class="cls-1" d="M.5.5h14v22l-7.1-6-6.9 6v-22z"/></svg></i>
+                    <a class="msg-text" role="button" data-toggle="collapse" data-parent="#messageList" href="#collapse-7" aria-expanded="true" aria-controls="collapse-7">
+                      Пройдите, пожалуйста, тестирование - <span class="gray">обращаем ваше внимание на то, что время</span>
+                    </a>
+                    <span class="msg-date">27 окт.</span>
+                  </div>
+                  <div id="collapse-7" class="collapse" role="tabpanel" aria-labelledby="heading-7">
+                    <div class="message-body">
+                      <p>Полный текст сообщения. является авторизованным сервисным центром  Canon и  занимается диагностикой, ремонтом и техническим обслуживанием офисной техники, а также является авторизованным партнером по продажам офисной техники Canon - качество от мирового лидера, которому можно доверять! Благодаря своему опыту, мы прекрасно ориентируемся в большом разнообразии современной офисной техники, а квалифицированные менеджеры помогут подобрать ту модель офисного аппарата, которая нужна именно Вам. Многолетний опыт работы в сфере оказания комплексных услуг и обладания необходимыми навыками — то, что отличает наших специалистов от многих других. Слаженная команда сервисных инженеров позволит проводить диагностический контроль, ремонт и обслуживание офисной техники любых моделей и марок, среди которых Canon, Kyocera, HP, Samsung, Xerox, Ricoh, Panasonic , Brother  с соблюдением всех необходимых требований к срокам и качеству работы. Оперативность и качество – девиз наших специалистов!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <nav aria-label="Сообщения">
+                    <ul class="pagination pagination-lg">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li class="active">
+                        <span>2 <span class="sr-only">(current)</span></span>
+                      </li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span class="glyphicon glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+              </div> <!-- /messages-list -->
             </div> <!-- /messages -->
 
             <div id="my-courses" class="my-courses tab-pane row" role="tabpanel">
-              <div class="tab-header">
+              <div class="tab-header clearfix">
                 <h2>Мои курсы</h2>
               </div>
               <div class="course-list lk-content col-xs-12">
+                <div class="course-item">
+                  <div class="course-name">
+                    <a href="course-info.html">Разговорный английский <br>язык</a>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. <br>
+                      Узнать подробнее можно <br>
+                      пройдя по ссылке <br>
+                      Расписание: пн-пт с 9.00 до 15.00 <br>
+                      В воскресенье с 11.00 до 13.00 <br>
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-name">
+                    <a href="course-info.html">Разговорный английский <br>язык</a>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. <br>
+                      Узнать подробнее можно <br>
+                      пройдя по ссылке <br>
+                      Расписание: пн-пт с 9.00 до 15.00 <br>
+                      В воскресенье с 11.00 до 13.00 <br>
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-name">
+                    <a href="course-info.html">Разговорный английский <br>язык</a>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. <br>
+                      Узнать подробнее можно <br>
+                      пройдя по ссылке <br>
+                      Расписание: пн-пт с 9.00 до 15.00 <br>
+                      В воскресенье с 11.00 до 13.00 <br>
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-name">
+                    <a href="course-info.html">Разговорный английский <br>язык</a>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. <br>
+                      Узнать подробнее можно <br>
+                      пройдя по ссылке <br>
+                      Расписание: пн-пт с 9.00 до 15.00 <br>
+                      В воскресенье с 11.00 до 13.00 <br>
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                  </div>
+                </div>
+
                 <div class="course-item">
                   <div class="course-name">
                     <a href="course-info.html">Разговорный английский <br>язык</a>
@@ -331,7 +578,7 @@
             </div> <!-- /my-courses -->
 
             <div id="completed-courses" class="lk-completed tab-pane row" role="tabpanel">
-              <div class="tab-header">
+              <div class="tab-header clearfix">
                 <h2>Пройденные курсы</h2>
               </div>
               <div class="lk-content col-xs-12">
@@ -486,52 +733,37 @@
 <!-- Модальные окна -->
 
     <!-- Регистрации -->
-    <div class="modal fade" id="myModalReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade message-modal" id="newMsgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Регистрация</h4>
+            <h4 class="modal-title" id="myModalLabel">Новое сообщение</h4>
           </div>
           <div class="modal-body">
-            <div class="social-auth">
-              <p>Вы можете зарегистрироваться через соцсети:</p>
-              <div class="social-btns">
-                <a href="https://www.vk.com" target="_blank"><i class="icon icon-vk"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="icon icon-fb"></i></a>
-                <a href="https://ok.ru" target="_blank"><i class="icon icon-ok"></i></a>
-                <a href="https://plus.google.com" target="_blank"><i class="icon icon-gplus"></i></a>
-              </div>
-              <p>или заполните форму:</p>
-            </div>
-            <form>
+            <form class="form-horizontal">
               <div class="form-group">
-                <label for="inputFIO">ФИО</label>
-                <input type="text" class="form-control" id="inputFIO" placeholder="Ваше имя*" required>
-              </div>
-              <div class="form-group">
-                <label for="inputLogin">E-mail (логин)</label>
-                <input type="text" class="form-control" id="inputLogin" placeholder="Введите ваш E-mail*" required>
-              </div>
-              <div class="form-group">
-                <label for="inputMobile">Мобильный телефон</label>
-                <input type="tel" class="form-control" id="inputMobile" placeholder="+7 (000) 000 00 00*" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-              </div>
-              <div class="form-group row">
-                <div class="col-xs-4">
-                  <span class="captcha">17 + 5 =</span>
-                </div>
-                <div class="col-xs-8">
-                  <input type="text" class="form-control" placeholder="Проверочный код*" required>
+                <label class="col-sm-3 control-label">Кому</label>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option>Иван Железновский</option>
+                    <option>Иван Железновский</option>
+                    <option>Иван Железновский</option>
+                    <option>Иван Железновский</option>
+                    <option>Иван Железновский</option>
+                  </select>
                 </div>
               </div>
-              <div class="reg-checkbox checkbox">
-                <div class="label-wrapper">
-                  <label>
-                    <input type="checkbox" id="termsCheckbox" required>
-                    <span class="checkbox-indicator"></span> Я ознакомлен(а) с условиями
-                  </label>
-                  <a class="modal-link" href="#">Пользовательского соглашения</a>
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="msgTheme">Тема</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" id="msgTheme" placeholder="Тема письма" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="msgText" class="col-sm-3 control-label">Сообщение</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="msgText" placeholder="Текст сообщения" rows="5"></textarea>
                 </div>
               </div>
               <div class="text-center">
@@ -544,73 +776,6 @@
       </div>
     </div>
 
-    <!-- Вход в личный кабинет -->
-    <div class="modal fade" id="myModalAuth" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Вход в личный кабинет</h4>
-          </div>
-          <div class="modal-body">
-            <div class="social-auth">
-              <p>Вы можете войти через соцсети:</p>
-              <div class="social-btns">
-                <a href="https://www.vk.com" target="_blank"><i class="icon icon-vk"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="icon icon-fb"></i></a>
-                <a href="https://ok.ru" target="_blank"><i class="icon icon-ok"></i></a>
-                <a href="https://plus.google.com" target="_blank"><i class="icon icon-gplus"></i></a>
-              </div>
-              <p>или заполните форму:</p>
-            </div>
-            <form>
-              <div class="form-group">
-                <label for="inputLogin">Логин</label>
-                <input type="text" class="form-control" id="inputLogin" placeholder="Ваш логин (Электронная почта)" required>
-              </div>
-              <div class="form-group">
-                <label for="inputPassword">Пароль</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Пароль" required>
-              </div>
-              <div class="form-group row">
-                <div class="col-xs-12 col-sm-6">
-                  <label class="auth-checkbox">
-                    <input type="checkbox">
-                    <span class="checkbox-indicator"></span> Чужой компьютер
-                  </label>
-                </div>
-                <div class="col-xs-12 col-sm-6 auth-forgot">
-                  <a href="#">Забыли пароль?</a>
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-green-tr">Войти</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ошибка авторизации -->
-    <div class="modal fade error" id="myModalError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-error"></i>Неверный логин/пароль</h4>
-          </div>
-          <div class="modal-body">
-            <p>Вы указали неверный логин или пароль.</p>
-            <p>Пожалуйста, воспользуйтесь</p>
-            <a href="#myModalAuth" role="button" class="modal-link" data-toggle="modal" data-dismiss="modal">Напоминанием пароля</a>
-            <div class="text-center">
-              <button type="submit" class="btn btn-green-tr" data-toggle="modal" data-target="#myModalAuth" data-dismiss="modal">Напомнить пароль</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 <!-- Подключение скриптов -->
 
