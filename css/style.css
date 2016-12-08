@@ -1735,13 +1735,14 @@ main {
   margin-bottom: 0;
 }
 
-.course-excerpt p::after{
+.course-excerpt p::after {
   content: '';
   position: absolute;
-  bottom: 0px;
+  bottom: -1px;
+  left: 0;
   width: 100%;
   height: 40px;
-  background-image: linear-gradient(to top, #fff 55%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to top, #fff 20%, rgba(255, 255, 255, 0));
 }
 
 .course-price {
@@ -2609,6 +2610,41 @@ time {
   height: auto;
 }
 
+.my-courses .course-item .left {
+  width: 220px;
+}
+
+.my-courses .course-name {
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.my-courses .course-start {
+  font-size: 14px;
+}
+
+.course-st-count {
+  width: 220px;
+}
+
+.my-courses .course-start p, 
+.course-st-count p {
+  margin-bottom: 5px;
+}
+
+.course-st-count b {
+  font-size: 18px;
+}
+
+.my-courses .course-excerpt {
+  width: 340px;
+  font-size: 14px;
+}
+
+.my-courses .course-excerpt p::after {
+  height: 80px;
+}
+
 /* ====================== Плавающая кнопка телефона ====================== */
 
 .btc_phone_but {
@@ -2882,6 +2918,14 @@ time {
 
   .msg-text { max-width: 350px; }
 
+  .my-courses .course-item .left { width: 170px; }
+
+  .my-courses .course-name { margin-bottom: 10px; }
+
+  .course-st-count { width: 140px; }
+
+  .my-courses .course-excerpt { width: 285px; }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -2922,10 +2966,10 @@ time {
   .header-middle-right { text-align: center; }
 
   .header-mobile {
-  width: 100%;
-  margin-right: 0;
-  margin-bottom: 10px;
-  text-align: center;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
   .header-mobile p { width: 120px; }
@@ -2946,42 +2990,42 @@ time {
   .slider-container { height: 300px; }  
 
   .slider-container .promo-bg {
-  width: 325px;
-  height: 270px;
+    width: 325px;
+    height: 270px;
   }
 
   .slider-container .promo-text {
-  width: 270px;
-  padding: 10px;
-  padding-top: 50px;
+    width: 270px;
+    padding: 10px;
+    padding-top: 50px;
   }
 
   .promo-title {
-  margin-bottom: 10px;
-  font-size: 17px;
+    margin-bottom: 10px;
+    font-size: 17px;
   }
 
   .promo-desc {
-  margin-bottom: 15px;
-  font-size: 14px;
+    margin-bottom: 15px;
+    font-size: 14px;
   }
 
   .users-block .item {
-  height: 170px;
-  padding: 20px;
-  font-size: 20px;
+    height: 170px;
+    padding: 20px;
+    font-size: 20px;
   }
 
   .guarantees-item { margin-bottom: 30px; }
 
   .reviews-photo {
-  width: 220px;
-  height: 220px;
+    width: 220px;
+    height: 220px;
   }
 
   .reviews-name {
-  margin-bottom: 10px;
-  font-size: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
   }
 
   .reviews-text { font-size: 14px; }
@@ -3099,6 +3143,10 @@ time {
   .msg-name { max-width: 150px; }
 
   .msg-text { max-width: 300px; }
+
+  .my-courses .course-item .left { width: 220px; }
+
+  .my-courses .course-item .course-btns { float: right; }
 
 }
 
@@ -3436,6 +3484,8 @@ time {
 
   .message-modal .form-group { margin-bottom: 10px; }
 
+  .my-courses .course-item .left { width: 220px; }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -3704,7 +3754,9 @@ time {
     margin-left: 0;
   }
 
+  .my-courses .course-item .left { width: auto; }
 
+  .my-courses .course-item .course-btns { float: none; }
 
 }
 
