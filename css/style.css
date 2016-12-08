@@ -310,6 +310,14 @@ a:focus {
   background-position: -60px -164px;
 }
 
+.icon-record {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 5px;
+  background-position: -50px -480px;
+}
+
 .section-title {
   position: relative;
   display: inline-block;
@@ -2610,16 +2618,16 @@ time {
   height: auto;
 }
 
-.my-courses .course-item .left {
+.lk .course-item .left {
   width: 220px;
 }
 
-.my-courses .course-name {
+.lk .course-name {
   width: auto;
   margin-bottom: 20px;
 }
 
-.my-courses .course-start {
+.lk .course-start {
   font-size: 14px;
 }
 
@@ -2627,7 +2635,7 @@ time {
   width: 220px;
 }
 
-.my-courses .course-start p, 
+.lk .course-start p, 
 .course-st-count p {
   margin-bottom: 5px;
 }
@@ -2636,13 +2644,27 @@ time {
   font-size: 18px;
 }
 
-.my-courses .course-excerpt {
+.lk .course-excerpt {
   width: 340px;
   font-size: 14px;
 }
 
-.my-courses .course-excerpt p::after {
+.lk .course-excerpt p::after {
   height: 80px;
+}
+
+.lk .btn-record {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  font-weight: bold;
+  text-align: center;
+  color: #a4bb75;
+}
+
+.lk .btn-record:hover {
+  text-decoration: none;
+  color: #B5D183;
 }
 
 /* ====================== Плавающая кнопка телефона ====================== */
@@ -2918,13 +2940,13 @@ time {
 
   .msg-text { max-width: 350px; }
 
-  .my-courses .course-item .left { width: 170px; }
+  .lk .course-item .left { width: 170px; }
 
-  .my-courses .course-name { margin-bottom: 10px; }
+  .lk .course-name { margin-bottom: 10px; }
 
   .course-st-count { width: 140px; }
 
-  .my-courses .course-excerpt { width: 285px; }
+  .lk .course-excerpt { width: 285px; }
 
 }
 
@@ -3144,9 +3166,9 @@ time {
 
   .msg-text { max-width: 300px; }
 
-  .my-courses .course-item .left { width: 220px; }
+  .lk .course-item .left { width: 250px; }
 
-  .my-courses .course-item .course-btns { float: right; }
+  .lk .course-item .course-btns { float: right; }
 
 }
 
@@ -3484,7 +3506,9 @@ time {
 
   .message-modal .form-group { margin-bottom: 10px; }
 
-  .my-courses .course-item .left { width: 220px; }
+  .lk .course-item .left { width: 220px; }
+
+  .btn-record { font-size: 14px; }
 
 }
 
@@ -3754,9 +3778,9 @@ time {
     margin-left: 0;
   }
 
-  .my-courses .course-item .left { width: auto; }
+  .lk .course-item .left { width: auto; }
 
-  .my-courses .course-item .course-btns { float: none; }
+  .lk .course-item .course-btns { float: none; }
 
 }
 
