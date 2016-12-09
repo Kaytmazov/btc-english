@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Детали курса | BTC English</title>
+    <title>Личный кабинет | BTC English</title>
     
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -81,12 +81,12 @@
             </div>
           </div>
           <div class="header-middle-right col-xs-12 col-md-7">
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModalReg">
-              <i class="icon icon-reg"></i>Регистрация
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModalAuth">
-              <i class="icon icon-auth"></i>Войти в личный кабинет
-            </button>
+            <a href="lk-teacher.html" class="btn btn-link">
+              <i class="icon icon-reg"></i>Личный кабинет
+            </a>
+            <a href="lk-teacher.html" class="btn btn-link">
+              <i class="icon icon-auth"></i>Выход
+            </a>
             <form action="search.html">
               <div class="search input-group">
                 <input type="text" class="form-control" placeholder="Поиск по курсам">
@@ -115,7 +115,7 @@
             <ul class="nav nav-justified">
               <li><a href="/">Главная<span class="sr-only">(активная)</span></a></li>
               <li><a href="#">О&nbsp;проекте</a></li>
-              <li class="dropdown active">
+              <li class="dropdown">
                 <a href="courses-page.html" class="dropdown-toggle">Курсы&nbsp;<span class="caret hidden-xs hidden-sm"></span></a>
                 <div class="dropdown-menu">
                   <ul class="dropdown-list">
@@ -142,123 +142,243 @@
       </div> <!-- /container -->
     </header>
 <!-- Main -->
-    <main class="course-info page">
+    <main class="lk-teacher page">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
             <ol class="breadcrumb">
               <li><a href="/">Главная</a></li>
-              <li><a href="courses-page.html">Наши курсы</a></li>
-              <li class="active">Название курса</li>
+              <li class="active">Личный кабинет преподавателя</li>
             </ol>
           </div>
         </div>
         <div class="row text-center">
           <div class="col-xs-12">
-            <h1 class="section-title">Название курса</h1>
+            <h1 class="section-title">Личный кабинет</h1>
           </div>
         </div>
-        <div class="course-info-blocks row">
-          <div class="col-xs-12 col-sm-4">
-            <div class="item date">
-              <div class="left">
-                <i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
+        <div class="lk clearfix">
+          <ul class="lk-nav col-md-1" role="tablist">
+            <li class="lk-nav-item nav-profile">
+              <a href="lk-teacher.html">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i><br>
+                Профиль
+              </a>
+            </li>
+            <li class="lk-nav-item nav-messages">
+              <a href="lk-teacher.html">
+                <i class="fa fa-envelope" aria-hidden="true"></i><br>
+                Сообщения
+              </a>
+            </li>
+            <li class="lk-nav-item nav-courses active">
+              <a href="lk-teacher.html">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i><br>
+                Мои курсы
+              </a>
+            </li>
+            <li class="lk-nav-item nav-completed">
+              <a href="lk-teacher.html">
+                <i class="fa fa-money" aria-hidden="true"></i><br>
+                Завершенные курсы
+              </a>
+            </li>
+            <li class="lk-nav-item nav-logout">
+              <a href="/">
+                <i class="fa fa-power-off" aria-hidden="true"></i><br>
+                Выйти
+              </a>
+            </li>
+          </ul> <!-- /lk-nav -->
+
+          <div class="tab-content col-md-11">
+
+            <div id="my-courses" class="my-courses tab-pane active row" role="tabpanel">
+              <div class="tab-header clearfix">
+                <h2>Бизнес-курс английского языка</h2>
               </div>
-              <div class="right">
-                <b>Дата и время проведения курса:</b>
-                <p>21 декабря 2016 года 21:00 (мск)</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="item price">
-              <div class="left">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-              </div>
-              <div class="right">
-                <b>Стоимость</b>
-                <p><span class="price-value">9000</span> р.</p>
-                <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#myModalReg">Записаться</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="item duration">
-              <div class="left">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-              </div>
-              <div class="right">
-                <b>Продолжительность курса</b>
-                <p>12 часов</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <section class="course-detail">
-          <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-              <div class="detail-heder">
-                <h4 class="line-title">Преподает</h4>
-                <div class="clearfix">
-                  <div class="left">
-                    <a href="teacher.html" class="user-photo">
-                      <img src="img/teachers/9.jpg" width="156" height="157" alt="Преподаватель">
-                    </a>
-                    <a href="teacher.html" class="user-name">Железновский Иван Иванович</a>
+              <div class="lk-course-info lk-content col-xs-12">
+
+                <div class="course-info-blocks row">
+                  <div class="col-xs-12 col-sm-4">
+                    <div class="item date">
+                      <div class="left">
+                        <i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
+                      </div>
+                      <div class="right">
+                        <b>Дата и время проведения курса:</b>
+                        <p>21 декабря 2016 года 21:00 (мск)</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="right">
-                    <a href="#myModalReg" data-toggle="modal" class="btn btn-green">Оплатить курс</a>
+                  <div class="col-xs-12 col-sm-4">
+                    <div class="item price">
+                      <div class="left">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </div>
+                      <div class="right">
+                        <b>Стоимость</b>
+                        <p><span class="price-value">9000</span> р.</p>
+                        <b class="">Учеников: 15</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <div class="item duration">
+                      <div class="left">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                      </div>
+                      <div class="right">
+                        <b>Продолжительность курса</b>
+                        <p>3 месяца</p>
+                        <p>(12 часов)</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="detail-middle">
-                <h4 class="line-title">Преимущества курса</h4>
-                <dl>
-                  <dt>Грамматика</dt>
-                  <dd>стройная, логичная система вместо сотен правил</dd>
-                  <dt>Лексика</dt>
-                  <dd>эффективные технологии запоминания вместо зубрежки</dd>
-                  <dt>Поддержка памяти</dt>
-                  <dd>интервальные повторения не дадут забыть изученное</dd>
-                  <dt>Разговорная практика</dt>
-                  <dd>более 1000 игр и упражнений вместо стандартных пересказов</dd>
-                </dl>
-              </div>
-              <div class="detail-bottom">
-                <h4 class="line-title">Описание курса</h4>
-                <div class="course-desc">
-                  <p>Еще никогда курсы английского языка для начинающих взрослых не были столь интересными, эффективными и полезными. Вы можете забыть про скучные и непонятные правила. Вся грамматическая структура языка будет представлена на наших уроках в виде логичных схем. Благодаря этому вам не потребуется тратить время на зазубривание, а умение грамотно говорить сформируется всего за 8 месяцев! Кроме того, вам не понадобится долго сидеть над словарем. При освоении новой лексики используется специальный подход, облегчающий запоминание. Вы научитесь понимать слова в контексте, и они благодаря этому будут дольше сохраняться в активной памяти.</p>
-                  <p>Но знание грамматики и базовый словарный запас – это еще не умение говорить! Чтобы помочь вам преодолеть языковой барьер и получить необходимые навыки устной речи, на наших занятиях по английскому языку для начинающих взрослых активно применяются игровые практики.</p>
+                <div class="webinar-link row">
+                  <div class="col-xs-12">
+                    <div class="webinar-link-wrapper clearfix">
+                      <div class="left">
+                        <p>Ссылка на видеозапись вебинара:</p>
+                        <span>ссылка доступна после завершения вебинара</span>
+                      </div>
+                      <div class="webinar-link-input col-xs-7 col-sm-5">
+                        <input type="text" class="form-control">
+                      </div>
+                      <button type="button" class="btn course-btn btn-webinar">Сохранить</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="text-center">
-                  <a href="#myModalReg" data-toggle="modal" class="btn btn-green">Оплатить курс</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+                <section class="course-detail clearfix">
+                    <div class="col-xs-12">
+                      <div class="detail-heder">
+                        <h4 class="line-title">Преподает</h4>
+                        <div class="clearfix">
+                          <div class="left">
+                            <a href="teacher.html" class="user-photo">
+                              <img src="img/teachers/9.jpg" width="156" height="157" alt="Преподаватель">
+                            </a>
+                            <a href="teacher.html" class="user-name">Железновский Иван Иванович</a>
+                          </div>
+                          <div class="right clearfix">
+                            <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                            <a href="#" class="btn-record"><i class="icon icon-record"></i>Видеозапись вебинара</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="detail-middle">
+                        <h4 class="line-title">Преимущества курса</h4>
+                        <dl>
+                          <dt>Грамматика</dt>
+                          <dd>стройная, логичная система вместо сотен правил</dd>
+                          <dt>Лексика</dt>
+                          <dd>эффективные технологии запоминания вместо зубрежки</dd>
+                          <dt>Поддержка памяти</dt>
+                          <dd>интервальные повторения не дадут забыть изученное</dd>
+                          <dt>Разговорная практика</dt>
+                          <dd>более 1000 игр и упражнений вместо стандартных пересказов</dd>
+                        </dl>
+                      </div>
+                      <div class="detail-bottom">
+                        <h4 class="line-title">Описание курса</h4>
+                        <div class="course-desc">
+                          <p>Еще никогда курсы английского языка для начинающих взрослых не были столь интересными, эффективными и полезными. Вы можете забыть про скучные и непонятные правила. Вся грамматическая структура языка будет представлена на наших уроках в виде логичных схем. Благодаря этому вам не потребуется тратить время на зазубривание, а умение грамотно говорить сформируется всего за 8 месяцев! Кроме того, вам не понадобится долго сидеть над словарем. При освоении новой лексики используется специальный подход, облегчающий запоминание. Вы научитесь понимать слова в контексте, и они благодаря этому будут дольше сохраняться в активной памяти.</p>
+                          <p>Но знание грамматики и базовый словарный запас – это еще не умение говорить! Чтобы помочь вам преодолеть языковой барьер и получить необходимые навыки устной речи, на наших занятиях по английскому языку для начинающих взрослых активно применяются игровые практики.</p>
+                        </div>
+                      </div>
+                      <div class="detail-students">
+                        <h4 class="line-title">Ученики</h4>
+                        <div class="students-list row">
+                          <div class="list-item col-xs-12 col-sm-6">
+                            <div class="left">
+                              <a href="#" class="user-photo">
+                                <img src="img/students/1.jpg" width="156" height="157" alt="Преподаватель">
+                              </a>
+                            </div>
+                            <div class="right">
+                              <a href="#" class="user-name">Железновский Иван Иванович</a>
+                              <p>Группа № 1791</p>
+                              <p>Skype: nameskype</p>
+                              <p>E-mail: <a href="mailto:site@site.ru" target="_blank">site@site.ru</a></p>
+                              <p>Телефон: +7(111)1112255</p>
+                              <p>Родной язык: русский</p>
+                              <p>Желаемый язык: английский</p>
+                              <p><a href="#">Удостоверение личности</a></p>
+                              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#newMsgModal">Написать сообщение</button>
+                            </div>
+                          </div>
+
+                          <div class="list-item col-xs-12 col-sm-6">
+                            <div class="left">
+                              <a href="#" class="user-photo">
+                                <img src="img/students/1.jpg" width="156" height="157" alt="Преподаватель">
+                              </a>
+                            </div>
+                            <div class="right">
+                              <a href="#" class="user-name">Железновский Иван Иванович</a>
+                              <p>Группа № 1791</p>
+                              <p>Skype: nameskype</p>
+                              <p>E-mail: <a href="mailto:site@site.ru" target="_blank">site@site.ru</a></p>
+                              <p>Телефон: +7(111)1112255</p>
+                              <p>Родной язык: русский</p>
+                              <p>Желаемый язык: английский</p>
+                              <p><a href="#">Удостоверение личности</a></p>
+                              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#newMsgModal">Написать сообщение</button>
+                            </div>
+                          </div>
+
+                          <div class="list-item col-xs-12 col-sm-6">
+                            <div class="left">
+                              <a href="#" class="user-photo">
+                                <img src="img/students/1.jpg" width="156" height="157" alt="Преподаватель">
+                              </a>
+                            </div>
+                            <div class="right">
+                              <a href="#" class="user-name">Железновский Иван Иванович</a>
+                              <p>Группа № 1791</p>
+                              <p>Skype: nameskype</p>
+                              <p>E-mail: <a href="mailto:site@site.ru" target="_blank">site@site.ru</a></p>
+                              <p>Телефон: +7(111)1112255</p>
+                              <p>Родной язык: русский</p>
+                              <p>Желаемый язык: английский</p>
+                              <p><a href="#">Удостоверение личности</a></p>
+                              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#newMsgModal">Написать сообщение</button>
+                            </div>
+                          </div>
+
+                          <div class="list-item col-xs-12 col-sm-6">
+                            <div class="left">
+                              <a href="#" class="user-photo">
+                                <img src="img/students/1.jpg" width="156" height="157" alt="Преподаватель">
+                              </a>
+                            </div>
+                            <div class="right">
+                              <a href="#" class="user-name">Железновский Иван Иванович</a>
+                              <p>Группа № 1791</p>
+                              <p>Skype: nameskype</p>
+                              <p>E-mail: <a href="mailto:site@site.ru" target="_blank">site@site.ru</a></p>
+                              <p>Телефон: +7(111)1112255</p>
+                              <p>Родной язык: русский</p>
+                              <p>Желаемый язык: английский</p>
+                              <p><a href="#">Удостоверение личности</a></p>
+                              <button type="button" class="btn course-btn btn-enroll" data-toggle="modal" data-target="#newMsgModal">Написать сообщение</button>
+                            </div>
+                          </div>
+
+                        </div> <!-- /students-list -->
+                      </div>
+                    </div>
+                </section>
+
+              </div> <!-- /course-list -->
+            </div> <!-- /my-courses -->
+
+          </div> <!-- /lk-content -->
+        </div> <!-- /lk -->
+      </div> <!-- /container -->
     </main>
-<!-- Консультация -->
-    <section class="feedback-section">
-      <div class="container">
-        <div class="feedback-bg">
-          <div class="feedback-text">
-            <h2 class="feedback-title">Не знаете какой курс выбрать?</h2>
-            <p class="feedback-desc">Закажите БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ <br>Наши специалисты с удовольствием ответят на все ваши вапросы</p>
-            <form>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Ваше имя" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Ваш E-mail или номер телефона" required>
-              </div>
-              <button type="submit" class="btn btn-orange">Заказать консультацию</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+
 <!-- Футер -->
     <footer class="main-footer">
       <div class="footer-top">
@@ -401,52 +521,37 @@
 <!-- Модальные окна -->
 
     <!-- Регистрации -->
-    <div class="modal fade" id="myModalReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade message-modal" id="newMsgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Регистрация</h4>
+            <h4 class="modal-title" id="myModalLabel">Новое сообщение</h4>
           </div>
           <div class="modal-body">
-            <div class="social-auth">
-              <p>Вы можете зарегистрироваться через соцсети:</p>
-              <div class="social-btns">
-                <a href="https://www.vk.com" target="_blank"><i class="icon icon-vk"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="icon icon-fb"></i></a>
-                <a href="https://ok.ru" target="_blank"><i class="icon icon-ok"></i></a>
-                <a href="https://plus.google.com" target="_blank"><i class="icon icon-gplus"></i></a>
-              </div>
-              <p>или заполните форму:</p>
-            </div>
-            <form>
+            <form class="form-horizontal">
               <div class="form-group">
-                <label for="inputFIO">ФИО</label>
-                <input type="text" class="form-control" id="inputFIO" placeholder="Ваше имя*" required>
-              </div>
-              <div class="form-group">
-                <label for="inputLogin">E-mail (логин)</label>
-                <input type="text" class="form-control" id="inputLogin" placeholder="Введите ваш E-mail*" required>
-              </div>
-              <div class="form-group">
-                <label for="inputMobile">Мобильный телефон</label>
-                <input type="tel" class="form-control" id="inputMobile" placeholder="+7 (000) 000 00 00*" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-              </div>
-              <div class="form-group row">
-                <div class="col-xs-4">
-                  <span class="captcha">17 + 5 =</span>
-                </div>
-                <div class="col-xs-8">
-                  <input type="text" class="form-control" placeholder="Проверочный код*" required>
+                <label class="col-sm-3 control-label">Кому</label>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option>Иван Железновский</option>
+                    <option>Иван Железновский</option>
+                    <option>Иван Железновский</option>
+                    <option>Иван Железновский</option>
+                    <option>Иван Железновский</option>
+                  </select>
                 </div>
               </div>
-              <div class="reg-checkbox checkbox">
-                <div class="label-wrapper">
-                  <label>
-                    <input type="checkbox" id="termsCheckbox" required>
-                    <span class="checkbox-indicator"></span> Я ознакомлен(а) с условиями
-                  </label>
-                  <a class="modal-link" href="#">Пользовательского соглашения</a>
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="msgTheme">Тема</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" id="msgTheme" placeholder="Тема письма" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="msgText" class="col-sm-3 control-label">Сообщение</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="msgText" placeholder="Текст сообщения" rows="5"></textarea>
                 </div>
               </div>
               <div class="text-center">
@@ -454,74 +559,6 @@
                 <button type="button" class="btn btn-green-tr" data-dismiss="modal">Отмена</button>
               </div>
             </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Вход в личный кабинет -->
-    <div class="modal fade" id="myModalAuth" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Вход в личный кабинет</h4>
-          </div>
-          <div class="modal-body">
-            <div class="social-auth">
-              <p>Вы можете войти через соцсети:</p>
-              <div class="social-btns">
-                <a href="https://www.vk.com" target="_blank"><i class="icon icon-vk"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="icon icon-fb"></i></a>
-                <a href="https://ok.ru" target="_blank"><i class="icon icon-ok"></i></a>
-                <a href="https://plus.google.com" target="_blank"><i class="icon icon-gplus"></i></a>
-              </div>
-              <p>или заполните форму:</p>
-            </div>
-            <form>
-              <div class="form-group">
-                <label for="inputLogin">Логин</label>
-                <input type="text" class="form-control" id="inputLogin" placeholder="Ваш логин (Электронная почта)" required>
-              </div>
-              <div class="form-group">
-                <label for="inputPassword">Пароль</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Пароль" required>
-              </div>
-              <div class="form-group row">
-                <div class="col-xs-12 col-sm-6">
-                  <label class="auth-checkbox">
-                    <input type="checkbox">
-                    <span class="checkbox-indicator"></span> Чужой компьютер
-                  </label>
-                </div>
-                <div class="col-xs-12 col-sm-6 auth-forgot">
-                  <a href="#">Забыли пароль?</a>
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-green-tr">Войти</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ошибка авторизации -->
-    <div class="modal fade error" id="myModalError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-error"></i>Неверный логин/пароль</h4>
-          </div>
-          <div class="modal-body">
-            <p>Вы указали неверный логин или пароль.</p>
-            <p>Пожалуйста, воспользуйтесь</p>
-            <a href="#myModalAuth" role="button" class="modal-link" data-toggle="modal" data-dismiss="modal">Напоминанием пароля</a>
-            <div class="text-center">
-              <button type="submit" class="btn btn-green-tr" data-toggle="modal" data-target="#myModalAuth" data-dismiss="modal">Напомнить пароль</button>
-            </div>
           </div>
         </div>
       </div>
@@ -535,5 +572,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Bootstrap-select -->
     <script src="bootstrap-select/js/bootstrap-select.min.js"></script>
+    <!-- Input Photo -->
+    <script src="js/lk-scripts.js"></script>
   </body>
 </html>

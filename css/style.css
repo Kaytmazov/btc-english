@@ -2568,6 +2568,10 @@ time {
   border-radius: 2px;
 }
 
+.message.read .new-msg {
+  visibility: hidden;
+}
+
 .msg-marker {
   position: absolute;
   top: -1px;
@@ -2665,6 +2669,105 @@ time {
 .lk .btn-record:hover {
   text-decoration: none;
   color: #B5D183;
+}
+
+.lk .course-info-blocks {
+  margin-bottom: 15px;
+}
+
+.lk .course-info-blocks .item {
+  padding: 30px 17px;
+}
+
+.lk .course-info-blocks .item.price p {
+  margin-bottom: 10px;
+}
+
+.webinar-link-wrapper {
+  padding: 6px 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.webinar-link .left {
+  float: left;
+  margin-top: 3px;
+}
+
+.webinar-link .left p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #191919;
+}
+
+.webinar-link .left span {
+  color: #666;
+}
+
+.webinar-link .form-control {
+  display: inline-block;
+}
+
+.webinar-link .btn-webinar {
+  float: left;
+  height: 54px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.lk-course-info .course-detail {
+  margin-bottom: 0;
+  padding: 30px 10px;
+}
+
+.lk-course-info  .detail-heder .right .btn-webinar {
+  float: left;
+  margin-right: 15px;
+}
+
+.lk-course-info  .detail-heder .right .btn-record {
+  float: right;
+}
+
+.lk .lk-course-info .btn-record {
+  padding: 15px;
+  border: 1px solid #ecb318;
+  border-radius: 8px;
+}
+
+.students-list .list-item {
+  margin-bottom: 40px;
+}
+
+.students-list .list-item .left {
+  float: left;
+}
+
+.students-list .list-item .right {
+  float: left;
+}
+
+.students-list .list-item .user-name {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.students-list .list-item .right p {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #191919;
+}
+
+.students-list .list-item a {
+  text-decoration: underline;
+}
+
+.students-list .list-item .btn-enroll {
+  width: auto;
+  margin-top: 10px;
+  padding-right: 50px;
+  background-position: 182px -85px, 0;
 }
 
 /* ====================== Плавающая кнопка телефона ====================== */
@@ -2971,6 +3074,11 @@ time {
 
   .course-info-blocks .price .btn { margin-top: 6px; }
 
+  .lk .course-info-blocks .item {
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+
 }
 
 /* Medium Devices, Desktops */
@@ -3169,6 +3277,23 @@ time {
   .lk .course-item .left { width: 250px; }
 
   .lk .course-item .course-btns { float: right; }
+
+  .webinar-link .left p { font-size: 15px; }
+
+  .webinar-link .left span { font-size: 12px; }
+
+  .webinar-link .btn-webinar {
+    height: 44px;
+    font-size: 16px;
+    width: auto;
+  }
+
+  .lk-course-info  .detail-heder .left, 
+  .lk-course-info .detail-heder .right {
+    width: 50%;
+  }
+
+  .lk-course-info  .detail-heder .left .user-name { display: block; }
 
 }
 
@@ -3510,6 +3635,19 @@ time {
 
   .btn-record { font-size: 14px; }
 
+  .webinar-link-wrapper { text-align: center; }
+
+  .webinar-link .left {
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .lk-course-info  .detail-heder .right .btn-webinar {
+    float: right;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -3682,6 +3820,8 @@ time {
 
   .modal-title { font-size: 18px; }
 
+  .modal-body { padding: 0 15px 30px; }
+
   .modal .social-auth { font-size: 14px; }
 
   .modal .reg-checkbox label, 
@@ -3781,6 +3921,49 @@ time {
   .lk .course-item .left { width: auto; }
 
   .lk .course-item .course-btns { float: none; }
+
+  .lk .course-info-blocks .item {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 30px 10px;
+  }
+
+  .lk .course-info-blocks .item .left { margin-right: 5px; }
+
+  .webinar-link-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 10px 5px;
+  }
+
+  .webinar-link-input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .webinar-link .btn-webinar { float: none; }
+
+  .lk-course-info .course-detail {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 10px 0;
+  }
+
+  .lk-course-info  .detail-heder .left {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .lk-course-info .detail-heder .right { width: 100%; }
+
+  .lk-course-info  .detail-heder .right .btn-webinar, 
+  .lk-course-info  .detail-heder .right .btn-record, 
+  .students-list .list-item .left { float: none; }
+
+  .students-list .list-item .left, 
+  .students-list .list-item .user-name { text-align: center; }
+
+  .students-list .list-item .right p { font-size: 14px; }
 
 }
 
