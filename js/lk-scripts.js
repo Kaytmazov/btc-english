@@ -22,6 +22,7 @@ $(document).ready(function(){
   }
 });
 
+
 // Сообщения
 $('.message a').on('click', function(){
   $(this).parent().parent('.message').toggleClass('active');

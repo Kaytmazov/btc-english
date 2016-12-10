@@ -142,13 +142,13 @@
       </div> <!-- /container -->
     </header>
 <!-- Main -->
-    <main class="lk-teacher page">
+    <main class="lk-student page">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
             <ol class="breadcrumb">
               <li><a href="/">Главная</a></li>
-              <li class="active">Личный кабинет преподавателя</li>
+              <li class="active">Личный кабинет ученика</li>
             </ol>
           </div>
         </div>
@@ -171,16 +171,16 @@
                 Сообщения
               </a>
             </li>
-            <li class="lk-nav-item nav-courses">
-              <a href="#my-courses" aria-controls="my-courses" role="tab" data-toggle="tab">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i><br>
-                Мои курсы
-              </a>
-            </li>
             <li class="lk-nav-item nav-completed">
               <a href="#completed-courses" aria-controls="completed-courses" role="tab" data-toggle="tab">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i><br>
+                Пройденные курсы
+              </a>
+            </li>
+            <li class="lk-nav-item nav-courses">
+              <a href="#my-courses" aria-controls="my-courses" role="tab" data-toggle="tab">
                 <i class="fa fa-money" aria-hidden="true"></i><br>
-                Завершенные курсы
+                Оплаченные курсы
               </a>
             </li>
             <li class="lk-nav-item nav-logout">
@@ -210,12 +210,15 @@
                   </div>
                   <div class="lk-content-right col-sm-8 col-md-9">
                     <div class="lk-user-info">
-                      <p class="lk-user-name">Иван Иванович Железновский</p>
+                      <p class="lk-user-name">Иван Железновский</p>
+                      <p class="student-group">Группа № 1791</p>
+                      <p class="training-period">Срок обучения: <span>3 месяца</span></p>
+
                     </div>
                     <div class="form-group">
                       <label for="lkInputNik" class="col-sm-4 control-label">НИК:</label>
                       <div class="col-sm-8 col-md-6">
-                        <input type="text" class="form-control" id="lkInputNik" placeholder="Ник" value="IIZheleznovskiy">
+                        <input type="text" class="form-control" id="lkInputNik" placeholder="Ник" value="Ivan1791">
                       </div>
                     </div>
                     <div class="form-group lk-nofield">
@@ -243,30 +246,17 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="lkInputLg2" class="col-sm-4 control-label">Язык преподавания:</label>
+                      <label for="lkInputLg2" class="col-sm-4 control-label">Желаемый язык:</label>
                       <div class="col-sm-8 col-md-6">
-                        <input type="text" class="form-control" id="lkInputLg2" placeholder="Язык преподавания" value="English">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="lkInputExp" class="col-sm-4 control-label">Стаж преподавания:</label>
-                      <div class="col-sm-8 col-md-6">
-                        <input type="text" class="form-control" id="lkInputExp" placeholder="Стаж преподавания" value="15 лет">
+                        <input type="text" class="form-control" id="lkInputLg2" placeholder="Желаемый язык" value="English">
                       </div>
                     </div>
                     <div class="form-group lk-nofield">
                       <label class="col-sm-4 control-label">Удостоверение личности:</label>
                       <div class="col-sm-8 col-md-6">
                         <label class="lk-nofield-value">
-                          <u>Прикрепить</u>
-                          <input type="file" class="hidden">
+                          15 лет
                         </label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="lkInputInfo" class="col-sm-4 control-label">Информация о Вас:</label>
-                      <div class="col-sm-8 col-md-6">
-                        <textarea class="form-control" id="lkInputInfo" placeholder="Информация о Вас" rows="12">Придерживается гибкого, динамичного подхода в преподавании языка с ориентацией на индивидуальные запросы студента. Работает в интерактивном режиме, привлекает много дополнительного аутентичного языкового материала. Отходит от традиционных школьных методов: при изучении грамматики делает упор не на изложение перспективных правил, а на объяснение принципов функционирования языковой системы;</textarea>
                       </div>
                     </div>
                     <div class="form-group">
@@ -463,25 +453,25 @@
               </div> <!-- /messages-list -->
             </div> <!-- /messages -->
 
-            <div id="my-courses" class="my-courses tab-pane row" role="tabpanel">
+            <div id="completed-courses" class="lk-completed tab-pane row" role="tabpanel">
               <div class="tab-header clearfix">
-                <h2>Мои курсы</h2>
+                <h2>Пройденные курсы</h2>
               </div>
               <div class="course-list lk-content col-xs-12">
 
                 <div class="course-item">
                   <div class="left">
                     <div class="course-name">
-                      <a href="lk-course.html">Разговорный английский язык</a>
+                      <a href="lk-course-student.html">Разговорный английский язык</a>
                     </div>
                     <div class="course-start">
-                      <p>Начало</p>
+                      <p>Завершен</p>
                       <span>16.09.2016 в 21.00</span>
                     </div>
                   </div>
-                  <div class="course-st-count hidden-xs">
-                    <p>Ученики:</p>
-                    <b>8 человек</b>
+                  <div class="course-teacher hidden-xs">
+                    <p>Преподает:</p>
+                    <a href="teacher.html">Железновский Иван Иванович</a>
                   </div>
                   <div class="course-excerpt hidden-xs hidden-sm">
                     <p>
@@ -489,23 +479,23 @@
                     </p>
                   </div>
                   <div class="course-btns">
-                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                    <a href="#" class="btn-record"><i class="icon icon-record"></i>Видеозапись вебинара</a>
                   </div>
                 </div>
 
                 <div class="course-item">
                   <div class="left">
                     <div class="course-name">
-                      <a href="lk-course.html">Разговорный английский язык</a>
+                      <a href="lk-course-student.html">Разговорный английский язык</a>
                     </div>
                     <div class="course-start">
-                      <p>Начало</p>
+                      <p>Завершен</p>
                       <span>16.09.2016 в 21.00</span>
                     </div>
                   </div>
-                  <div class="course-st-count hidden-xs">
-                    <p>Ученики:</p>
-                    <b>8 человек</b>
+                  <div class="course-teacher hidden-xs">
+                    <p>Преподает:</p>
+                    <a href="teacher.html">Железновский Иван Иванович</a>
                   </div>
                   <div class="course-excerpt hidden-xs hidden-sm">
                     <p>
@@ -513,23 +503,23 @@
                     </p>
                   </div>
                   <div class="course-btns">
-                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                    <a href="#" class="btn-record"><i class="icon icon-record"></i>Видеозапись вебинара</a>
                   </div>
                 </div>
 
                 <div class="course-item">
                   <div class="left">
                     <div class="course-name">
-                      <a href="lk-course.html">Разговорный английский язык</a>
+                      <a href="lk-course-student.html">Разговорный английский язык</a>
                     </div>
                     <div class="course-start">
-                      <p>Начало</p>
+                      <p>Завершен</p>
                       <span>16.09.2016 в 21.00</span>
                     </div>
                   </div>
-                  <div class="course-st-count hidden-xs">
-                    <p>Ученики:</p>
-                    <b>8 человек</b>
+                  <div class="course-teacher hidden-xs">
+                    <p>Преподает:</p>
+                    <a href="teacher.html">Железновский Иван Иванович</a>
                   </div>
                   <div class="course-excerpt hidden-xs hidden-sm">
                     <p>
@@ -537,7 +527,94 @@
                     </p>
                   </div>
                   <div class="course-btns">
-                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                    <a href="#" class="btn-record"><i class="icon icon-record"></i>Видеозапись вебинара</a>
+                  </div>
+                </div>
+
+              </div> <!-- /course-list -->
+            </div> <!-- /completed-courses -->
+
+            <div id="my-courses" class="my-courses tab-pane row" role="tabpanel">
+              <div class="tab-header clearfix">
+                <h2>Оплаченные курсы</h2>
+              </div>
+              <div class="course-list lk-content col-xs-12">
+
+                <div class="course-item">
+                  <div class="left">
+                    <div class="course-name">
+                      <a href="lk-course-student.html">Разговорный английский язык</a>
+                    </div>
+                    <div class="course-start">
+                      <p>Начало</p>
+                      <span>16.09.2016 в 21.00</span>
+                    </div>
+                  </div>
+                  <div class="course-teacher hidden-xs">
+                    <p>Преподает:</p>
+                    <a href="teacher.html">Железновский Иван Иванович</a>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <p class="price"><span class="price-value">28 000</span> руб.</p>
+                    <p class="payed-status">Оплачено <i class="fa fa-check-circle" aria-hidden="true"></i></p>
+                    <a href="#" class="btn course-btn btn-more">Подробнее</a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="left">
+                    <div class="course-name">
+                      <a href="lk-course-student.html">Разговорный английский язык</a>
+                    </div>
+                    <div class="course-start">
+                      <p>Начало</p>
+                      <span>16.09.2016 в 21.00</span>
+                    </div>
+                  </div>
+                  <div class="course-teacher hidden-xs">
+                    <p>Преподает:</p>
+                    <a href="teacher.html">Железновский Иван Иванович</a>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <p class="price"><span class="price-value">28 000</span> руб.</p>
+                    <p class="payed-status">Оплачено <i class="fa fa-check-circle" aria-hidden="true"></i></p>
+                    <a href="#" class="btn course-btn btn-more">Подробнее</a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="left">
+                    <div class="course-name">
+                      <a href="lk-course-student.html">Разговорный английский язык</a>
+                    </div>
+                    <div class="course-start">
+                      <p>Начало</p>
+                      <span>16.09.2016 в 21.00</span>
+                    </div>
+                  </div>
+                  <div class="course-teacher hidden-xs">
+                    <p>Преподает:</p>
+                    <a href="teacher.html">Железновский Иван Иванович</a>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <p class="price"><span class="price-value">28 000</span> руб.</p>
+                    <p class="payed-status">Оплачено <i class="fa fa-check-circle" aria-hidden="true"></i></p>
+                    <a href="#" class="btn course-btn btn-more">Подробнее</a>
                   </div>
                 </div>
 
@@ -567,87 +644,6 @@
 
               </div> <!-- /course-list -->
             </div> <!-- /my-courses -->
-
-            <div id="completed-courses" class="lk-completed tab-pane row" role="tabpanel">
-              <div class="tab-header clearfix">
-                <h2>Пройденные курсы</h2>
-              </div>
-              <div class="course-list lk-content col-xs-12">
-
-                <div class="course-item">
-                  <div class="left">
-                    <div class="course-name">
-                      <a href="lk-course.html">Разговорный английский язык</a>
-                    </div>
-                    <div class="course-start">
-                      <p>Завершен</p>
-                      <span>16.09.2016 в 21.00</span>
-                    </div>
-                  </div>
-                  <div class="course-st-count hidden-xs">
-                    <p>Ученики:</p>
-                    <b>8 человек</b>
-                  </div>
-                  <div class="course-excerpt hidden-xs hidden-sm">
-                    <p>
-                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
-                    </p>
-                  </div>
-                  <div class="course-btns">
-                    <a href="#" class="btn-record"><i class="icon icon-record"></i>Видеозапись вебинара</a>
-                  </div>
-                </div>
-
-                <div class="course-item">
-                  <div class="left">
-                    <div class="course-name">
-                      <a href="lk-course.html">Разговорный английский язык</a>
-                    </div>
-                    <div class="course-start">
-                      <p>Завершен</p>
-                      <span>16.09.2016 в 21.00</span>
-                    </div>
-                  </div>
-                  <div class="course-st-count hidden-xs">
-                    <p>Ученики:</p>
-                    <b>8 человек</b>
-                  </div>
-                  <div class="course-excerpt hidden-xs hidden-sm">
-                    <p>
-                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
-                    </p>
-                  </div>
-                  <div class="course-btns">
-                    <a href="#" class="btn-record"><i class="icon icon-record"></i>Видеозапись вебинара</a>
-                  </div>
-                </div>
-
-                <div class="course-item">
-                  <div class="left">
-                    <div class="course-name">
-                      <a href="lk-course.html">Разговорный английский язык</a>
-                    </div>
-                    <div class="course-start">
-                      <p>Завершен</p>
-                      <span>16.09.2016 в 21.00</span>
-                    </div>
-                  </div>
-                  <div class="course-st-count hidden-xs">
-                    <p>Ученики:</p>
-                    <b>8 человек</b>
-                  </div>
-                  <div class="course-excerpt hidden-xs hidden-sm">
-                    <p>
-                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
-                    </p>
-                  </div>
-                  <div class="course-btns">
-                    <a href="#" class="btn-record"><i class="icon icon-record"></i>Видеозапись вебинара</a>
-                  </div>
-                </div>
-
-              </div> <!-- /course-list -->
-            </div> <!-- /completed-courses -->
 
           </div> <!-- /lk-content -->
         </div> <!-- /lk -->

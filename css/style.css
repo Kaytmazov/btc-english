@@ -1941,7 +1941,7 @@ a.btn-more:active,
   width: 60%;
 }
 
-.course-info-blocks i.fa {
+.course-info-blocks .left i.fa {
   width: 92px;
   height: 92px;
   font-size: 52px;
@@ -1954,7 +1954,7 @@ a.btn-more:active,
   cursor: default;
 }
 
-.course-info-blocks i.fa:hover {
+.course-info-blocks .left i.fa:hover {
   transform: scale(1.05);
 }
 
@@ -2376,7 +2376,6 @@ time {
 *                                                                                   *
 ************************************************************************************/
 .lk-nav {
-  min-height: 430px;
   margin-bottom: 0;
   padding: 0;
   padding-top: 25px;
@@ -2449,8 +2448,12 @@ time {
   background-color: #fff;
 }
 
-.lk-user-name {
+.lk-user-info {
   margin-bottom: 35px;
+}
+
+.lk-user-name {
+  margin-bottom: 0;
   font-size: 20px;
   font-weight: bold;
   color: #191919;
@@ -2635,6 +2638,7 @@ time {
   font-size: 14px;
 }
 
+.lk .course-list .course-teacher, 
 .course-st-count {
   width: 220px;
 }
@@ -2769,6 +2773,41 @@ time {
   padding-right: 50px;
   background-position: 182px -85px, 0;
 }
+
+/************************************************************************************
+*                                                                                   *
+*                   Страница - "Личный кабинет ученика"                             *
+*                                                                                   *
+************************************************************************************/
+.lk-user-info .student-group {
+  font-size: 18px;
+  color: #191919;
+}
+
+.lk-user-info .training-period {
+  font-size: 16px;
+  color: #7f7f7f;
+}
+
+.training-period span {
+  color: #191919;
+}
+
+.lk-student .course-list .price {
+  font-size: 16px;
+}
+
+.lk-student .course-list .price .price-value {
+  font-size: 24px;
+}
+
+.lk-student .lk p.payed-status {
+  margin-bottom: 7px!important;
+  font-size: 18px;
+  font-weight: 600;
+  color: #b6ce3a;
+}
+
 
 /* ====================== Плавающая кнопка телефона ====================== */
 
@@ -3005,7 +3044,7 @@ time {
 
   .course-name { width: 145px; }
 
-  .course-item .course-teacher { display: none; }
+  .courses-page .course-item .course-teacher { display: none; }
 
   .feedback-section .form-control { height: 55px; }
 
@@ -3024,7 +3063,7 @@ time {
 
   .course-info-blocks .item .left { margin-right: 10px; }
 
-  .course-info-blocks i.fa {
+  .course-info-blocks .left i.fa {
     width: 80px;
     height: 80px;
     font-size: 45px;
@@ -3037,8 +3076,6 @@ time {
 
   .news-photo { margin-bottom: 10px; }
 
-  .lk-nav { min-height: 0; }
-
   .lk-nav a { font-size: 11px; }
 
   .msg-text { max-width: 350px; }
@@ -3047,9 +3084,12 @@ time {
 
   .lk .course-name { margin-bottom: 10px; }
 
-  .course-st-count { width: 140px; }
+  .course-st-count, 
+  .lk .course-list .course-teacher { width: 140px; }
 
   .lk .course-excerpt { width: 285px; }
+
+  .lk .course-list .course-teacher a { font-size: 16px; }
 
 }
 
@@ -3255,10 +3295,9 @@ time {
 
   .tab-header h2 { font-size: 22px; }
 
-  .lk-user-name {
-    margin-bottom: 15px;
-    font-size: 16px;
-  }
+  .lk-user-info { margin-bottom: 15px; }
+
+  .lk-user-name { font-size: 16px; }
   
   .form-horizontal .control-label, 
   .lk .form-control, 
@@ -3294,6 +3333,11 @@ time {
   }
 
   .lk-course-info  .detail-heder .left .user-name { display: block; }
+
+  .lk-user-info .student-group, 
+  .lk-user-info .training-period { font-size: 14px; }
+
+  .lk-student .course-list .price .price-value { font-size: 20px; }
 
 }
 
@@ -3603,7 +3647,7 @@ time {
 
   .lk-content { padding-bottom: 50px; }
 
-  .lk-user-name {
+  .lk-user-info {
     margin-top: 10px;
     text-align: center;
   }
@@ -3647,6 +3691,12 @@ time {
     margin-right: 0;
     margin-bottom: 10px;
   }
+
+  .lk-student .course-list .price, 
+  .lk-student .lk p.payed-status { font-size: 14px; }
+
+  .lk-student .course-list .price .price-value { font-size: 16px; }
+
 
 }
 
@@ -3920,7 +3970,10 @@ time {
 
   .lk .course-item .left { width: auto; }
 
-  .lk .course-item .course-btns { float: none; }
+  .lk .course-item .course-btns {
+    float: none;
+    text-align: center;
+  }
 
   .lk .course-info-blocks .item {
     margin-left: -15px;
