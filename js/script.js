@@ -59,6 +59,27 @@ $(document).ready(function(){
   });
 });
 
+// Анимация графика
+$(document).ready(function(){
+
+  var show = true;
+  var countbox = '.guarantees-diagram';
+
+  $(window).on('scroll load', function(){
+    if(!show) return false;
+
+    var w_top = $(window).scrollTop();
+    var e_top = $(countbox).offset().top;
+    var e_height = $(countbox).outerHeight();
+
+    if(w_top + 200 >= e_top){
+      $('.guarantees-diagram').addClass('active');
+
+      show = false;
+    }
+  });
+});
+
 // Длы safari
 $("form").submit(function(e) {
   var ref = $(this).find("[required]");
