@@ -917,6 +917,7 @@ main {
   text-transform: uppercase;
   line-height: 1.2;
   color: #333;
+  transition-duration: 0.3s;
 }
 
 .course-intro .intro-link:hover {
@@ -937,7 +938,7 @@ main {
   transition-duration: 0.3s;
 }
 
-.course-intro .intro-link:hover .title-bg {
+.course-intro .intro-link .title-bg:hover {
   transform: translate(-50%, -50%) scale(1.05);
 }
 
@@ -1093,7 +1094,7 @@ main {
 }
 
 .guarantees-diagram.active .line-1 {
-  animation: dash 2s 500ms linear forwards;
+  animation: lines 2s 500ms linear forwards;
 }
 
 .guarantees-diagram .line-2 {
@@ -1102,12 +1103,44 @@ main {
 }
 
 .guarantees-diagram.active .line-2 {
-  animation: dash 4s 500ms linear forwards;
+  animation: lines 4s 500ms linear forwards;
 }
 
-@keyframes dash {
+@keyframes lines {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+.guarantees-diagram .dots {
+  opacity: 0;
+}
+
+.guarantees-diagram.active .dots {
+  animation-name: dots;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+.guarantees-diagram.active .dot-1 {
+  animation-delay: 1.3s;
+}
+
+.guarantees-diagram.active .dot-2 {
+  animation-delay: 1.7s;
+}
+
+.guarantees-diagram.active .dot-3 {
+  animation-delay: 2.1s;
+}
+
+.guarantees-diagram.active .dot-4 {
+  animation-delay: 2.4s;
+}
+
+@keyframes dots {
+  to {
+    opacity: 1;
   }
 }
 
