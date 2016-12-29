@@ -938,7 +938,7 @@ main {
   transition-duration: 0.3s;
 }
 
-.course-intro .intro-link .title-bg:hover {
+.course-intro .intro-link:hover .title-bg {
   transform: translate(-50%, -50%) scale(1.05);
 }
 
