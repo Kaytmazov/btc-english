@@ -1,13 +1,3 @@
-/* Подключение шрифта для логотипа*/
-@font-face {
-  font-family: 'Franklin Gothic Book';
-  font-style: normal;
-  font-weight: bold;
-  src: local('Franklin Gothic Book'), 
-  url('../fonts/FRABK.woff') format('woff'), 
-  url('../fonts/FRABK.TTF') format('truetype');
-}
-
 /* Подключение шрифтов Segoe UI*/
 
 /* font-family: "SegoeUIRegular"; */
@@ -262,7 +252,10 @@ a:focus {
 .icon-languages {
   width: 25px;
   height: 25px;
-  background-position: -55px 0;
+}
+
+.icon-ru {
+  background-image: url(../img/flags/rus.png);
 }
 
 .icon-left, 
@@ -512,9 +505,8 @@ main {
   position: absolute;
   right: 0;
   bottom: 0;
-  font-family: 'Franklin Gothic Book';
-  font-size: 15px;
-  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
   line-height: 1;
   color: #000;
 }
@@ -687,6 +679,7 @@ main {
   color: #646464;
   border-right: 1px solid #ccc;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-justified > li:last-child > a {
@@ -1011,7 +1004,6 @@ main {
 .teacher-name {
   position: relative;
   display: block;
-  min-height: 62px;
   margin-top: 10px;
   margin-bottom: 20px;
   padding-bottom: 13px;
@@ -1038,7 +1030,6 @@ main {
 }
 
 .teacher-desc {
-  min-height: 88px;
   margin-bottom: 0;
   font-size: 16px;
 }
@@ -2104,6 +2095,7 @@ a.btn-more:active,
 }
 
 .course-detail .user-photo {
+  z-index: 10;
   width: 92px;
   height: 92px;
   margin-right: 20px;
@@ -3211,8 +3203,6 @@ time {
     font-size: 16px;
   }
 
-  .header-logo .logo-title { font-size: 11px; }
-
   .header-top-right, 
   .header-middle-left, 
   .header-middle-right { text-align: center; }
@@ -3468,7 +3458,7 @@ time {
     text-align: center;
   }
 
-  .header-logo .logo-title { font-size: 15px; }
+  .header-logo .logo-title { font-size: 14px; }
 
   .header-middle-right .btn-link {
     padding-top: 10px;
@@ -3543,9 +3533,6 @@ time {
     margin: 0 auto;
     margin-bottom: 30px;
   }
-
-  .teacher-name, 
-  .teacher-desc { min-height: 0; }
 
   .guarantees-section { padding-bottom: 80px; }
 
@@ -3798,7 +3785,7 @@ time {
 
   .section-title { font-size: 20px; }
   
-  .header-logo .logo-title { font-size: 14px; }
+  .header-logo .logo-title { font-size: 13px; }
 
   .header-mobile p {
     width: auto;

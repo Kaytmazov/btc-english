@@ -15,13 +15,6 @@ $("#imgInp").change(function(){
   readURL(this);
 });
 
-// Одинаковый размер высоты у двух колонок
-$(document).ready(function(){
-  if ( $('div.container').outerWidth() > 750 ) {
-    $('.lk-nav').height( $('.tab-content').height() - 25 );
-  }
-});
-
 // Сообщения
 $('.message a').on('click', function(){
   $(this).parent().parent('.message').toggleClass('active');

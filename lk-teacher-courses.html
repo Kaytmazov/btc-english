@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Новости | BTC English</title>
+    <title>Личный кабинет | BTC English</title>
     
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -85,12 +85,12 @@
             </div>
           </div>
           <div class="header-middle-right col-xs-12 col-md-7">
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModalReg">
-              <i class="icon icon-reg"></i>Регистрация
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModalAuth">
-              <i class="icon icon-auth"></i>Войти в личный кабинет
-            </button>
+            <a href="lk-teacher.html" class="btn btn-link">
+              <i class="icon icon-reg"></i>Личный кабинет
+            </a>
+            <a href="index.html" class="btn btn-link">
+              <i class="icon icon-auth"></i>Выход
+            </a>
             <form action="search.html">
               <div class="search input-group">
                 <input type="text" class="form-control" placeholder="Поиск по курсам">
@@ -138,7 +138,7 @@
               </li>
               <li><a href="helpful-page.html">Полезная информация</a></li>
               <li><a href="#">Методика обучения</a></li>
-              <li class="active"><a href="news.html">Новости</a></li>
+              <li><a href="news.html">Новости</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
@@ -146,124 +146,166 @@
       </div> <!-- /container -->
     </header>
 <!-- Main -->
-    <main class="news-page page">
+    <main class="lk-teacher page">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
             <ol class="breadcrumb">
               <li><a href="index.html">Главная</a></li>
-              <li><a href="news.html">Новости</a></li>
-              <li class="active">Заголовок новости</li>
+              <li class="active">Личный кабинет преподавателя</li>
             </ol>
           </div>
         </div>
         <div class="row text-center">
           <div class="col-xs-12">
-            <h1 class="section-title">Заголовок новости</h1>
+            <h1 class="section-title">Личный кабинет</h1>
           </div>
         </div>
-        <div class="full-news row">
-          <div class="col-xs-12">
-            <div class="item-wrapper clearfix">
-              <a href="#" class="news-photo" data-toggle="modal" data-target="#lightbox">
-                <img src="img/news/1.jpg" alt="">
+        <div class="lk clearfix">
+          <ul class="lk-nav col-md-1">
+            <li class="lk-nav-item nav-profile">
+              <a href="lk-teacher.html">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i><br>
+                Профиль
               </a>
-              <a class="news-title" href="#">Все больший упор в работе Фонда делается на обучение руководителей и сотрудников предприятий малого и среднего бизнеса.</a>
-              <time>12.09.16 18:48</time>
-              <div class="news-text">
-                <p>Придерживается гибкого, динамичного подхода в преподавании языка с ориентацией на индивидуальные запросы студента. Работает в интерактивном режиме, привлекает много дополнительного аутентичного языкового материала. Отходит от традиционных школьных методов: при изучении грамматики делает упор не на изложение прескриптивных правил, а на объяснение принципов функционирования языковой системы; лексический запас расширяет за счёт комбинирования методов внешнего поиска эквивалентов в родном языке и внутреннего контрастивного анализа семантически сходных единиц изучаемого языка. Придерживается гибкого, динамичного подхода в преподавании языка с ориентацией на индивидуальные запросы студента. Работает в интерактивном режиме, привлекает много дополнительного аутентичного языкового материала. Отходит от традиционных школьных методов: при изучении грамматики делает упор не на изложение прескриптивных правил, а на объяснение принципов функционирования языковой системы; лексический запас расширяет за счёт комбинирования методов внешнего поиска эквивалентов в родном языке и внутреннего контрастивного анализа семантически сходных единиц изучаемого языка.</p>
-              </div>
-              <a class="back-link" href="#">Назад</a>
-            </div>
-          </div>
-        </div>
-<!-- Другие новости -->
-        <div class="row text-center">
-          <div class="col-xs-12">
-            <h2 class="section-title">Другие новости</h2>
-          </div>
-        </div>
-        <div class="other-news row">
-          <div class="col-xs-12">
-            <div class="item-wrapper clearfix">
-              <div class="news-photo">
-                <img src="img/news/2.jpg" alt="">
-              </div>
-              <a class="news-title" href="#">Все больший упор в работе Фонда делается на обучение руководителей и сотрудников предприятий малого и среднего бизнеса.</a>
-              <time>12.09.16 18:48</time>
-              <div class="news-text">
-                <p>Придерживается гибкого, динамичного подхода в преподавании языка с ориентацией на индивидуальные запросы студента. Работает в интерактивном режиме, привлекает много дополнительного аутентичного языкового материала. Отходит от традиционных школьных методов: при изучении грамматики делает упор не на изложение прескриптивных правил, а на объяснение принципов функционирования языковой системы; лексический запас расширяет за счёт комбинирования методов внешнего поиска эквивалентов в родном языке и внутреннего контрастивного анализа семантически сходных единиц изучаемого языка.</p>
-              </div>
-            </div>
+            </li>
+            <li class="lk-nav-item nav-messages">
+              <a href="lk-teacher-messages.html">
+                <i class="fa fa-envelope" aria-hidden="true"></i><br>
+                Сообщения
+              </a>
+            </li>
+            <li class="lk-nav-item nav-courses active">
+              <a href="lk-teacher-courses.html">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i><br>
+                Мои курсы
+              </a>
+            </li>
+            <li class="lk-nav-item nav-completed">
+              <a href="lk-teacher-completed.html">
+                <i class="fa fa-money" aria-hidden="true"></i><br>
+                Завершенные курсы
+              </a>
+            </li>
+            <li class="lk-nav-item nav-logout">
+              <a href="index.html">
+                <i class="fa fa-power-off" aria-hidden="true"></i><br>
+                Выйти
+              </a>
+            </li>
+          </ul> <!-- /lk-nav -->
 
-            <div class="item-wrapper clearfix">
-              <div class="news-photo">
-                <img src="img/news/3.jpg" alt="">
+          <div class="tab-content col-md-11">
+            <div class="my-courses row">
+              <div class="tab-header clearfix">
+                <h2>Мои курсы</h2>
               </div>
-              <a class="news-title" href="#">Все больший упор в работе Фонда делается на обучение руководителей и сотрудников предприятий малого и среднего бизнеса.</a>
-              <time>12.09.16 18:48</time>
-              <div class="news-text">
-                <p>Придерживается гибкого, динамичного подхода в преподавании языка с ориентацией на индивидуальные запросы студента. Работает в интерактивном режиме, привлекает много дополнительного аутентичного языкового материала. Отходит от традиционных школьных методов: при изучении грамматики делает упор не на изложение прескриптивных правил, а на объяснение принципов функционирования языковой системы; лексический запас расширяет за счёт комбинирования методов внешнего поиска эквивалентов в родном языке и внутреннего контрастивного анализа семантически сходных единиц изучаемого языка.</p>
-              </div>
-            </div>
+              <div class="course-list lk-content col-xs-12">
 
-            <div class="item-wrapper clearfix">
-              <div class="news-photo">
-                <img src="img/news/4.jpg" alt="">
-              </div>
-              <a class="news-title" href="#">Все больший упор в работе Фонда делается на обучение руководителей и сотрудников предприятий малого и среднего бизнеса.</a>
-              <time>12.09.16 18:48</time>
-              <div class="news-text">
-                <p>Придерживается гибкого, динамичного подхода в преподавании языка с ориентацией на индивидуальные запросы студента. Работает в интерактивном режиме, привлекает много дополнительного аутентичного языкового материала. Отходит от традиционных школьных методов: при изучении грамматики делает упор не на изложение прескриптивных правил, а на объяснение принципов функционирования языковой системы; лексический запас расширяет за счёт комбинирования методов внешнего поиска эквивалентов в родном языке и внутреннего контрастивного анализа семантически сходных единиц изучаемого языка.</p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /other-news -->
-        <div class="row text-center">
-          <nav aria-label="Страница новостей">
-            <ul class="pagination pagination-lg">
-              <li>
-                <a href="#" aria-label="Предыдущий">
-                  <span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                </a>
-              </li>
-              <li><a href="#">1</a></li>
-              <li class="active">
-                <span>2 <span class="sr-only">(current)</span></span>
-              </li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li>
-                <a href="#" aria-label="Следующий">
-                  <span class="glyphicon glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+                <div class="course-item">
+                  <div class="left">
+                    <div class="course-name">
+                      <a href="lk-teacher-course.html">Разговорный английский язык</a>
+                    </div>
+                    <div class="course-start">
+                      <p>Начало</p>
+                      <span>16.09.2016 в 21.00</span>
+                    </div>
+                  </div>
+                  <div class="course-st-count hidden-xs">
+                    <p>Ученики:</p>
+                    <b>8 человек</b>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="left">
+                    <div class="course-name">
+                      <a href="lk-teacher-course.html">Разговорный английский язык</a>
+                    </div>
+                    <div class="course-start">
+                      <p>Начало</p>
+                      <span>16.09.2016 в 21.00</span>
+                    </div>
+                  </div>
+                  <div class="course-st-count hidden-xs">
+                    <p>Ученики:</p>
+                    <b>8 человек</b>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="left">
+                    <div class="course-name">
+                      <a href="lk-teacher-course.html">Разговорный английский язык</a>
+                    </div>
+                    <div class="course-start">
+                      <p>Начало</p>
+                      <span>16.09.2016 в 21.00</span>
+                    </div>
+                  </div>
+                  <div class="course-st-count hidden-xs">
+                    <p>Ученики:</p>
+                    <b>8 человек</b>
+                  </div>
+                  <div class="course-excerpt hidden-xs hidden-sm">
+                    <p>
+                      Краткое описание курса. Узнать подробнее можно пройдя по ссылке. Несколько предложений описательного текста. Краткое описание прошедшего вебинара. Узнать подробнее можно пройдя по ссылке.  Несколько предложений описательного текста. Краткое описание прошедшего вебинара
+                    </p>
+                  </div>
+                  <div class="course-btns">
+                    <a href="#" class="btn course-btn btn-webinar">Начать вебинар</a>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <nav aria-label="Сообщения">
+                    <ul class="pagination pagination-lg">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span class="glyphicon glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li class="active">
+                        <span>2 <span class="sr-only">(current)</span></span>
+                      </li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span class="glyphicon glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+              </div> <!-- /course-list -->
+            </div> <!-- /my-courses -->
+
+          </div> <!-- /lk-content -->
+        </div> <!-- /lk -->
       </div> <!-- /container -->
     </main>
-<!-- Консультация -->
-    <section class="feedback-section">
-      <div class="container">
-        <div class="feedback-bg">
-          <div class="feedback-text">
-            <h2 class="feedback-title">Не знаете какой курс выбрать?</h2>
-            <p class="feedback-desc">Закажите БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ <br>Наши специалисты с удовольствием ответят на все ваши вапросы</p>
-            <form>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Ваше имя" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Ваш E-mail или номер телефона" required>
-              </div>
-              <button type="submit" class="btn btn-orange">Заказать консультацию</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+
 <!-- Футер -->
     <footer class="main-footer">
       <div class="footer-top">
@@ -404,170 +446,6 @@
       </div>
     </div>
 
-<!-- Модальные окна -->
-    <!-- lightbox -->
-    <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-          <div class="modal-content">
-            <div class="modal-body">
-              <img src="" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Регистрации -->
-    <div class="modal fade" id="myModalReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Регистрация</h4>
-          </div>
-          <div class="modal-body">
-            <div class="social-auth">
-              <p>Вы можете зарегистрироваться через соцсети:</p>
-              <div class="social-btns">
-                <a href="https://www.vk.com" target="_blank"><i class="icon icon-vk"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="icon icon-fb"></i></a>
-                <a href="https://ok.ru" target="_blank"><i class="icon icon-ok"></i></a>
-                <a href="https://plus.google.com" target="_blank"><i class="icon icon-gplus"></i></a>
-              </div>
-              <p>или заполните форму:</p>
-            </div>
-            <form>
-              <div class="form-group">
-                <label for="inputFIO">ФИО</label>
-                <input type="text" class="form-control" id="inputFIO" placeholder="Ваше имя*" required>
-              </div>
-              <div class="form-group">
-                <label for="inputLogin">E-mail (логин)</label>
-                <input type="text" class="form-control" id="inputLogin" placeholder="Введите ваш E-mail*" required>
-              </div>
-              <div class="form-group">
-                <label for="inputMobile">Мобильный телефон</label>
-                <input type="tel" class="form-control" id="inputMobile" placeholder="+7 (000) 000-00-00*" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-              </div>
-              <div class="form-group row">
-                <div class="col-xs-4">
-                  <span class="captcha">17 + 5 =</span>
-                </div>
-                <div class="col-xs-8">
-                  <input type="text" class="form-control" placeholder="Проверочный код*" required>
-                </div>
-              </div>
-              <div class="reg-checkbox checkbox">
-                <div class="label-wrapper">
-                  <label>
-                    <input type="checkbox" id="termsCheckbox" required>
-                    <span class="checkbox-indicator"></span> Я ознакомлен(а) с условиями
-                  </label>
-                  <a class="modal-link" href="#">Пользовательского соглашения</a>
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-orange-tr">Ок</button>
-                <button type="button" class="btn btn-green-tr" data-dismiss="modal">Отмена</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Вход в личный кабинет -->
-    <div class="modal fade" id="myModalAuth" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Вход в личный кабинет</h4>
-          </div>
-          <div class="modal-body">
-            <div class="social-auth">
-              <p>Вы можете войти через соцсети:</p>
-              <div class="social-btns">
-                <a href="https://www.vk.com" target="_blank"><i class="icon icon-vk"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="icon icon-fb"></i></a>
-                <a href="https://ok.ru" target="_blank"><i class="icon icon-ok"></i></a>
-                <a href="https://plus.google.com" target="_blank"><i class="icon icon-gplus"></i></a>
-              </div>
-              <p>или заполните форму:</p>
-            </div>
-            <form>
-              <div class="form-group">
-                <label for="inputLogin">Логин</label>
-                <input type="text" class="form-control" id="inputLogin" placeholder="Ваш логин (Электронная почта)" required>
-              </div>
-              <div class="form-group">
-                <label for="inputPassword">Пароль</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Пароль" required>
-              </div>
-              <div class="form-group row">
-                <div class="col-xs-12 col-sm-6">
-                  <label class="auth-checkbox">
-                    <input type="checkbox">
-                    <span class="checkbox-indicator"></span> Чужой компьютер
-                  </label>
-                </div>
-                <div class="col-xs-12 col-sm-6 auth-forgot">
-                  <a href="#myModalReset" role="button" class="modal-link" data-toggle="modal" data-dismiss="modal">Забыли пароль?</a>
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-green-tr">Войти</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Напоминание пароля -->
-    <div class="modal fade" id="myModalReset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-auth"></i>Напоминание пароля</h4>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="inputLogin">E-mail (логин)</label>
-                <input type="text" class="form-control" id="inputLogin" placeholder="Введите ваш E-mail*" required>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-green-tr">Отправить пароль</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ошибка авторизации -->
-    <div class="modal fade error" id="myModalError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title" id="myModalLabel"><i class="icon icon-error"></i>Неверный логин/пароль</h4>
-          </div>
-          <div class="modal-body">
-            <p>Вы указали неверный логин или пароль.</p>
-            <p>Пожалуйста, воспользуйтесь</p>
-            <a href="#myModalReset" role="button" class="modal-link" data-toggle="modal" data-dismiss="modal">Напоминанием пароля</a>
-            <div class="text-center">
-              <button type="submit" class="btn btn-green-tr" data-toggle="modal" data-target="#myModalAuth" data-dismiss="modal">Напомнить пароль</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 <!-- Подключение скриптов -->
 
@@ -577,8 +455,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Bootstrap-select -->
     <script src="bootstrap-select/js/bootstrap-select.min.js"></script>
-    <!-- Lightbox -->
-    <script src="js/lightbox.js"></script>
+    <!-- Input Photo -->
+    <script src="js/lk-scripts.js"></script>
     <!-- Input tel mask -->
     <script src="js/inputmask.min.js"></script>
     <script src="js/jquery.inputmask.min.js"></script>
