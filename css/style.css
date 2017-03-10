@@ -194,6 +194,12 @@ a:focus {
   transform: scale(1.1);
 }
 
+.icon-radio {
+  width: 20px;
+  height: 23px;
+  background-position: right 0;
+}
+
 .icon-reg {
   width: 23px;
   height: 23px;
@@ -600,6 +606,7 @@ main {
 
 .header-middle-right .btn-link {
   float: left;
+  padding: 6px 8px;
   font-size: 16px;
   text-decoration: underline;
 }
@@ -607,7 +614,7 @@ main {
 .header-middle-right form {
   display: inline-block;
   float: right;
-  width: 270px;
+  width: 195px;
   vertical-align: middle;
 }
 
@@ -3019,19 +3026,19 @@ time {
   .slider-container { height: 420px; }
 
   .slider-container .promo-bg {
-  width: 450px;
-  height: 370px;
+    width: 450px;
+    height: 370px;
   }
 
   .slider-container .promo-text {
-  width: 370px;
-  padding: 20px;
-  padding-top: 70px;
+    width: 370px;
+    padding: 20px;
+    padding-top: 70px;
   }
 
   .promo-title {
-  margin-bottom: 15px;
-  font-size: 22px;
+    margin-bottom: 15px;
+    font-size: 22px;
   }
 
   .promo-desc {
@@ -3060,11 +3067,22 @@ time {
 
   .header-mobile span { font-size: 12px; }
 
+  .header-middle-left, 
+  .header-middle-right { text-align: center; }
+ 
+  .header-middle-right form {
+    float: none; 
+    width: 220px;
+  }
+
+  .header-middle-left { margin-bottom: 15px; }
+
   .header-middle-left .btn-link { padding: 0; }
 
-  .header-middle-right .btn-link { font-size: 14px; }
-
-  .header-middle-right form { width: 185px; }
+  .header-middle-right .btn-link {
+    float: none;
+    font-size: 14px;
+  }
 
   .search.input-group .form-control {
     height: 35px;
@@ -3203,9 +3221,7 @@ time {
     font-size: 16px;
   }
 
-  .header-top-right, 
-  .header-middle-left, 
-  .header-middle-right { text-align: center; }
+  .header-top-right { text-align: center; }
 
   .header-mobile {
     width: 100%;
@@ -3215,13 +3231,6 @@ time {
   }
 
   .header-mobile p { width: 120px; }
-
-  .header-middle-right .btn-link, 
-  .header-middle-right form { float: none; }
-
-  .header-middle-right form { width: 220px; }
-
-  .header-middle-left { margin-bottom: 15px; }
 
   .navbar-default { font-size: 13px; }
 
@@ -3774,8 +3783,8 @@ time {
 @media only screen and (max-width : 480px) {
 
   .btn-orange {
-  padding: 8px 10px;
-  font-size: 12px;
+    padding: 8px 10px;
+    font-size: 12px;
   }
 
   .btn-green {
@@ -3855,6 +3864,8 @@ time {
   .guarantees-section { padding: 10px 0 50px; }
 
   .guarantees-section .btn-green { bottom: -20px; }
+
+  .helpful-info .section-title { margin-top: 0; }
 
   .helpful-text {
     padding: 10px;
